@@ -1,6 +1,7 @@
 # LEER UPDATES
 
 16/04/2024
+
 -Hay un HTML que no sé de donde salió, aparece en el commit del primer update, lo dejé allí
 
 -Eliminé un directorio que creo que se creó al compilar el proyecto, no lo veo indispensable, cualquier cosa lo agregamos de nuevo
