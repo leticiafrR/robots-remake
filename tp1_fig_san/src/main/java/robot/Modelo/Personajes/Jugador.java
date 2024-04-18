@@ -1,10 +1,13 @@
 package robot.Modelo.Personajes;
 
-import robot.Modelo.Vector2D;
+import robot.Modelo.Vec2D;
 
 public class Jugador extends Personaje{
-
-    public void moverse(Vector2D posicion){
-
+    public Jugador(Vec2D posicion){
+        super(posicion);
     }
+    public void moverse(Vec2D posicion){
+        super.setPosicion(posicion);
+    }
+
 }

@@ -1,8 +1,19 @@
 package robot.Modelo.Personajes;
 
-import robot.Modelo.Vector2D;
+import robot.Modelo.Vec2D;
 
 public abstract class Personaje {
-    private Vector2D posicion;
-    public abstract void moverse(Vector2D p);
+    private Vec2D posicion;
+    public Personaje(Vec2D posicion){
+        this.posicion=posicion;
+    }
+    public abstract void moverse(Vec2D p);
+
+    public Vec2D getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(Vec2D posicion) {
+        this.posicion = posicion;
+    }
 }

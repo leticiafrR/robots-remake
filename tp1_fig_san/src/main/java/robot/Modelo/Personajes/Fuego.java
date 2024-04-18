@@ -1,9 +1,12 @@
 package robot.Modelo.Personajes;
 
-import robot.Modelo.Vector2D;
+import robot.Modelo.Vec2D;
 
-public class Fuego   extends Personaje {
+public class Fuego extends Personaje {
+    public Fuego(Vec2D posicion){
+        super(posicion);
+    }
     @Override
-    public void moverse(Vector2D p) {
+    public void moverse(Vec2D p) {
     }
 }
