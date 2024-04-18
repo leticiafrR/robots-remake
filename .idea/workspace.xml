@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="update .idea" />
+    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="update .idea">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleportRandom.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleportRandom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" afterDir="false" />
+    </list>
+    <list id="b135b9fd-73f1-401f-acd3-00abe146b655" name="Changes by Usuario" comment="">
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +34,23 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java">
+      <ranges>
+        <range start1="33" end1="38" start2="33" end2="60" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="40" end1="51" start2="62" end2="65" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="52" end1="53" start2="66" end2="70" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="54" end1="54" start2="71" end2="72" changelist="b135b9fd-73f1-401f-acd3-00abe146b655" />
+        <range start1="55" end1="55" start2="73" end2="77" changelist="b135b9fd-73f1-401f-acd3-00abe146b655" />
+        <range start1="56" end1="58" start2="78" end2="79" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="60" end1="63" start2="81" end2="81" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="64" end1="65" start2="82" end2="82" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="66" end1="69" start2="83" end2="89" changelist="b135b9fd-73f1-401f-acd3-00abe146b655" />
+        <range start1="86" end1="86" start2="106" end2="116" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="89" end1="112" start2="119" end2="119" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,6 +101,8 @@
       <updated>1713319327318</updated>
       <workItem from="1713319329078" duration="3298000" />
       <workItem from="1713405254046" duration="10347000" />
+      <workItem from="1713473662707" duration="1756000" />
+      <workItem from="1713475898969" duration="1684000" />
     </task>
     <servers />
   </component>
