@@ -1,6 +1,6 @@
 package robot.Modelo;
 
-public class Vec2D {
+public class Vec2D implements Comparable<Vec2D> {
     public static final Vec2D ZERO = new Vec2D(0, 0);
 
     public final double x;
@@ -11,9 +11,10 @@ public class Vec2D {
         this.y = y;
     }
     public boolean equals(Vec2D other) {
-        return this.x == other.x && this.y == other.y;
+        return this.compareTo(other) == 0;
     }
     @Override
+
     public String toString() {
         return "(%f, %f)".formatted(x, y);
     }
@@ -24,5 +25,11 @@ public class Vec2D {
 
     public double getY() {
         return y;
+    }
+
+    @Override
+    public int compareTo(Vec2D o) {
+        if ((o.getX()==x)&&(o.getY())==y){return 0;}
+        return 1;
     }
 }
