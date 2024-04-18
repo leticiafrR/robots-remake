@@ -13,6 +13,7 @@ public class RobotX2 extends Robot{
 
     @Override
     public void perseguirPosicion(Vec2D posicion) {
+
         super.perseguirPosicion(posicion);
         super.perseguirPosicion(posicion);
     }

@@ -7,6 +7,6 @@ public class AccionMovimiento implements Action{
 
     @Override
     public void aplicar(EstadoDeJuego e) {
-
+        e.realizarJugada(direccion);
     }
 }

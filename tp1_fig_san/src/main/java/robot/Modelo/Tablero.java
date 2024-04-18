@@ -8,60 +8,61 @@ import java.util.Random;
 
 
 public class Tablero {
+
     private static int largoX;
     private  static int largoY;
 
-    public enum Proportions { X1, X2, CELDAS}
-    private final int[] p;
-    private static Random rand;
-    private final Jugador player;
+    // se actualiza en cada startPoint
+    private Jugador player;
     private ArrayList<Robot> robots;
-    private final HashSet<Fuego> fuegos;
-    private final HashSet<Vec2D> posicionesRobots;
+    private final HashSet<Fuego> fuegos = new HashSet<>();
+
+
+    //generacion de robots
+    public enum Proportions { X1, X2, CELDAS}
+    private final int[] proportion = new int[]{4,1,150};
+    private final Random rand = new Random();;
+
 
     public Tablero(int largoX, int largoY){
-        p = new int[]{4,1,150};
         Tablero.largoX = largoX;
         Tablero.largoY = largoY;
-        rand = new Random();
-        posicionesRobots = new HashSet<>();
-        fuegos = new HashSet<>();
         player = new Jugador(new Vec2D(largoX /2,largoY/2));
-        robots = crearRobots(largoX*largoY);
     }
 
-    private ArrayList<Robot> crearRobots(int cantCeldas){
-        int cantX2 = (p[(Proportions.X2).ordinal()] * cantCeldas)/ p[(Proportions.CELDAS).ordinal()];
-        int cantX1 = (p[(Proportions.X1).ordinal()]* cantCeldas)/ p[(Proportions.CELDAS).ordinal()];
-        robots = new ArrayList<>();
-        for (int i=0;i<cantX1+cantX2;i++){
-            Vec2D pos = posDesocupada();
-            if (i<cantX1){ robots.add(new RobotX1(pos));} else { robots.add(new RobotX2(pos));}
-            posicionesRobots.add(pos);
-        }
-        return robots;
-    }
-
-    private Vec2D posDesocupada(){
-        Vec2D nuevaPosRobot = vectorRandom();
-        while (posicionesRobots.contains(nuevaPosRobot) && (nuevaPosRobot.compareTo(player.getPosicion())!=0)){
-            nuevaPosRobot = vectorRandom();
-        }
-        return nuevaPosRobot;
-    }
-    private Vec2D vectorRandom(){
-        return new Vec2D(rand.nextDouble(largoX),rand.nextDouble(largoY));
-    }
     public void startPoint(int nivel){
-
+        //se coloca otra vez al player al centro
+        int cantRobotX2 = ((proportion[(Proportions.X2).ordinal()] * (largoX*largoY))/ proportion[(Proportions.CELDAS).ordinal()])+nivel;
+        int cantRobotX1 = (proportion[(Proportions.X1).ordinal()]* (largoX*largoY))/ proportion[(Proportions.CELDAS).ordinal()];
+        if (nivel%3==0){cantRobotX1+=1;}
+        robots = crearRobots(cantRobotX1,cantRobotX2);
     }
 
+    //mueve a los robots y si hay colision avisa
     public boolean colisionRobots(){
-        return false;
+        HashSet<Vec2D> posRobots = new HashSet<>();
+        boolean foundColission = false;
+        for (Robot robot : robots){
+            robot.perseguirPosicion(player.getPosicion());
+            if (posRobots.contains(robot.getPosicion())){
+
+            }
+            posRobots.add(robot.getPosicion());
+        }
+        for (Robot robot: robots){
+            if
+        }
     }
 
     public boolean perseguirJugador(){
-        return false;
+        boolean exito = false;
+        for (Robot robot: robots){
+            robot.perseguirPosicion(player.getPosicion());
+            if (robot.getPosicion()==player.getPosicion()){
+                exito = true;
+            }
+        }
+        return exito;
     }
 
     public void moverPersonaje(Personaje p){
@@ -86,9 +87,31 @@ public class Tablero {
         return false;
     }
 
-
-
-    private boolean colission(){
-
+    private ArrayList<Robot> crearRobots(int cantX1, int cantX2){
+        HashSet<Vec2D> posicionesRobots = new HashSet<>();
+        robots = new ArrayList<>();
+        for (int i=0;i<cantX1;i++){
+            Vec2D pos = posDesocupada(posicionesRobots);
+            robots.add(new RobotX1(pos));
+            posicionesRobots.add(pos);
+        }
+        for (int i=0;i<cantX2;i++){
+            Vec2D pos = posDesocupada(posicionesRobots);
+            robots.add(new RobotX2(pos));
+            posicionesRobots.add(pos);
+        }
+        return robots;
     }
+
+    private Vec2D posDesocupada(HashSet<Vec2D> posicionesOcupadas {
+        Vec2D nuevaPosRobot = vectorRandom();
+        while (posicionesOcupadas.contains(nuevaPosRobot) && (nuevaPosRobot.compareTo(player.getPosicion())!=0)){
+            nuevaPosRobot = vectorRandom();
+        }
+        return nuevaPosRobot;
+    }
+    private Vec2D vectorRandom(){
+        return new Vec2D(rand.nextDouble(largoX),rand.nextDouble(largoY));
+    }
+
 }

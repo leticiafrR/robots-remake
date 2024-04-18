@@ -11,12 +11,21 @@ public class EstadoDeJuego {
     private int nivel;
 
     public void actualizarEstadoJuego(){
+
         if (tablero.win()){
             nextLevel();
         } else if (tablero.lose()) {
             gameOver();
         }
 
+    }
+    public void update(Action a){
+        a.aplicar(this);
+        actualizarEstadoJuego();
+    }
+
+    private void posicionarScene(){
+        tablero.perseguirJugador();
     }
     public void startGame(){
         tablero.startPoint(nivel);
@@ -29,17 +38,11 @@ public class EstadoDeJuego {
         nivel++;
         startGame();
     }
-    private void posicionarEscena(){
+    public void realizarJugada(Vec2D direccion){
 
+        tablero.moverPersonaje(tablero.ge);
     }
-    public void realizarJugada(){
 
-    }
-    public void update(Iterable<Action> acciones){
-        for(Action accion: acciones){
-            accion.aplicar(this);
-        }
-    }
 
     public int getPuntuacion() {
         return puntuacion;
