@@ -32,4 +32,6 @@ public class Vec2D implements Comparable<Vec2D> {
         if ((o.getX()==x)&&(o.getY())==y){return 0;}
         return 1;
     }
+
+
 }

@@ -24,7 +24,8 @@ public class EstadoDeJuego {
         actualizarEstadoJuego();
     }
 
-    private void posicionarScene(){
+    private void posicionarScene(Vec2D direccion){
+        tablero.moverJugador(direccion);
         tablero.perseguirJugador();
     }
     public void startGame(){
@@ -39,8 +40,7 @@ public class EstadoDeJuego {
         startGame();
     }
     public void realizarJugada(Vec2D direccion){
-
-        tablero.moverPersonaje(tablero.ge);
+        posicionarScene(direccion);
     }
 
 
