@@ -22,12 +22,12 @@ public class Vec2D {
         }
         return false;
     }
-    @Override
+   // @Override
 
 
-    public String toString() {
+    /*public String toString() {
         return "(%f, %f)".formatted(x, y);
-    }
+    }*/
 
     public double getX() {
         return x;
@@ -37,6 +37,12 @@ public class Vec2D {
         return y;
     }
 
+    public Vec2D sumarCon(Vec2D v){
+        return new Vec2D(this.x+v.getX(),this.y+v.getY());
+    }
 
+    public Vec2D restarCon(Vec2D v){
+        return new Vec2D(this.x-v.getX(), this.y-v.getY());
+    }
 
 }

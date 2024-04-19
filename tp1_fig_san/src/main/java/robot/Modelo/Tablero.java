@@ -1,11 +1,8 @@
 package robot.Modelo;
 
 import robot.Modelo.Personajes.*;
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Random;
-
 
 public class Tablero {
 
@@ -15,7 +12,7 @@ public class Tablero {
     // se actualiza en cada startPoint
     private Jugador player;
     private ArrayList<Robot> robots ;
-    private ArrayList<Fuego> fuegos;
+    private ArrayList<Vec2D> fuegos;
 
 
     //generacion de robots
@@ -62,65 +59,62 @@ public class Tablero {
         return nuevaPosRobot;
     }
 
-    //elimina robots colisionados, crea fuegos
-    private void colisionarRobots(){
-        ArrayList<Vec2D> posicionesRobots = new ArrayList<>();
-        for (Robot robot: robots) {
-            if (robot.getPosicion().estaContenido(posicionesRobots)) {
-                matarRobot(robot);
-            }
-            posicionesRobots.add(robot.getPosicion());
-        }
-        for (Robot robot)
-    }
-    private void matarRobot(Robot robot){
-        robots.remove(robot);
-        fuegos.add(new Fuego(robot.getPosicion()));
-    }
 
     public void perseguirJugador(){
         for (Robot robot: robots){
             robot.perseguirPosicion(player.getPosicion());
         }
+        colisionarRobots();
     }
-    /*
-    moverAPLICAR-> POS=(RAND)   EstadoDEJUEGO.REALIZAARJUGADA(POS) // REALIZARJUGADA-> TABLERO.MOVERJUGADOR(personaje,POS), PERSEGUIR(), COLISIONAR() // ACTUALIZARESTADO
-    moverTELEPORT-> POS     ESTADODEJUEGO.REALIZARJUGA
-     */
+
+    private void colisionarRobots(){
+        for (Robot r1: robots) {
+            if (incendiarRobot(r1)){continue;}
+            for (Robot r2: robots){
+                if (matarRobots(r1,r2)) { fuegos.add(r1.getPosicion());}
+            }
+        }
+    }
+    private boolean incendiarRobot(Robot r){
+        for (Vec2D f: fuegos){
+            if (r.getPosicion().equals(f)){
+                robots.remove(r);
+                return true;
+            }
+        }
+        return false;
+    }
+    private boolean matarRobots(Robot r1,Robot r2){
+        if (r1.getPosicion().equals(r2.getPosicion())){
+            robots.remove(r2);
+            robots.remove(r1);
+            return true;
+        }
+        return false;
+    }
     public void moverJugador(Vec2D posicion){
-        player.moverse(posicion);
+        player.moverse(player.getPosicion().sumarCon(posicion));
     }
-    public HashSet<Fuego> getFuegos() {
-        return fuegos;
+    public boolean win() { return robots.isEmpty(); }
+
+    public boolean lose(){
+        for (Robot r: robots){
+            if (r.getPosicion().equals(player.getPosicion())) { return true;}
+        }
+        for (Vec2D f: fuegos){
+            if (f.equals(player.getPosicion())) {return true;}
+        }
+        return false;
     }
+    public Vec2D posJug(){
+        return player.getPosicion();
+    }
+    public Vec2D vectorRandom(){
+        return new Vec2D(rand.nextDouble(largoX),rand.nextDouble(largoY));
+    }
+    public Jugador getPlayer() { return player;}
 
     public ArrayList<Robot> getRobots() {
         return robots;
     }
-
-    public Jugador getPlayer() {
-        return player;
-    }
-    public boolean win(){
-        return false;
-    }
-
-    public boolean lose(){
-        for (Robot robot: robots){
-            if (robot.getPosicion()==player.getPosicion()){
-                return true;
-            }
-        }
-        for (Fuego fuego: fuegos){
-            if (fuego.getPosicion()==player.getPosicion()){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private Vec2D vectorRandom(){
-        return new Vec2D(rand.nextDouble(largoX),rand.nextDouble(largoY));
-    }
-
 }
