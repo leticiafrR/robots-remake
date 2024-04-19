@@ -92,9 +92,11 @@ public class Tablero {
         }
         return false;
     }
+
     public void moverJugador(Vec2D posicion){
         player.moverse(player.getPosicion().sumarCon(posicion));
     }
+
     public boolean win() { return robots.isEmpty(); }
 
     public boolean lose(){
@@ -106,12 +108,8 @@ public class Tablero {
         }
         return false;
     }
-    public Vec2D posJug(){
-        return player.getPosicion();
-    }
-    public Vec2D vectorRandom(){
-        return new Vec2D(rand.nextDouble(largoX),rand.nextDouble(largoY));
-    }
+    public Vec2D posJug() { return player.getPosicion(); }
+    public Vec2D vectorRandom() { return new Vec2D(rand.nextDouble(largoX),rand.nextDouble(largoY)); }
     public Jugador getPlayer() { return player;}
 
     public ArrayList<Robot> getRobots() {
