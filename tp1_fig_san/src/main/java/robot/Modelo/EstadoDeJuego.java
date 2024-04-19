@@ -7,12 +7,19 @@ public class EstadoDeJuego {
     private int cantSafeTeleport;
     private int nivel;
 
+
     public EstadoDeJuego(int largoX, int largoY){
+        reset(largoX,largoY);
+    }
+    public void startGame(){
+        tablero.startPoint(nivel);
+    }
+    public void reset(int largoX, int largoY){
         puntuacion=0;
         cantSafeTeleport=1;
         nivel=1;
         tablero= new Tablero(largoX, largoY);
-        tablero.startPoint(nivel);
+        startGame();
     }
     public void actualizarEstadoJuego(){
         if (tablero.win()){
@@ -29,9 +36,7 @@ public class EstadoDeJuego {
         tablero.moverJugador(direccion);
         tablero.perseguirJugador();
     }
-    public void startGame(){
-        tablero.startPoint(nivel);
-    }
+
     public void gameOver(){
         nivel=1;
         puntuacion=0;
