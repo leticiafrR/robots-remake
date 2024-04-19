@@ -1,1 +1,123 @@
-@startumltitle ROBOTclass Vec2D{- Int x- Int y}abstract Personaje{- Vec2D posicion+ moverse(Vec2D posicion)}class Jugadorclass Robot{+ perseguirPosicion(Vec2D)}Personaje <|.. JugadorPersonaje <|.. RobotPersonaje<|.. Fuegoclass RobotX2class RobotX1Robot <|-- RobotX1Robot <|-- RobotX2class Tablero{- Int long- Int wide- Jugador player- List<Robot> robots- HashSet<Fuego> fuegos+ starPoint(Int nivel)+ colisionRobots():Boolean+ perseguirJugador():Boolean+ moverPersonaje(Personaje)+ Boolean win()+ Boolean lose()}Tablero..>Vec2DTablero*-->RobotTablero*-->JugadorTablero-->GameStateclass GameState{- Int puntuation- Tablero tabble- Int cantSafeTeleport- Int nivel+ actualizarEstadoJuego()+ starGame()+ gameOver()+ nextLevel()- posicionarEscena()+ realizarJugada()}note left of GameState::starGamellama a starPointend noteinterface Action{aplicar(GameState)}class AccionTeleport{- Vec2D newPosition}class AccionMovimiento{- Vec2D direction}AccionTeleportRandom..|> ActionAccionStartLevel..|> ActionAccionTeleport..|>ActionAccionMovimiento..|>Actionnote left of AccionStartLevelpresiona startGameend notenote left of AccionTeleportnecesita una posicion para su constriucciónend notenote left of Tablero::starPointposiciones aleatoriasend note@enduml
+@startuml
+
+title ROBOT
+class Vec2D{
+- Int x
+- Int y
++ equals(Vec2D): Boolean
++ estaContenido(List<Vec2D>): Boolean
++ sumarCon(): Vec2D
++ restarCon(): Vec2D
+}
+
+
+abstract Personaje{
+- Vec2D posicion
++ moverse(Vec2D posicion)
+}
+
+class Jugador
+
+class Robot{
++ perseguirPosicion(Vec2D)
+}
+
+Personaje <|.. Jugador
+Personaje <|.. Robot
+
+
+class RobotX2
+class RobotX1
+
+Robot <|-- RobotX1
+Robot <|-- RobotX2
+
+
+class Tablero{
+- Int largoX
+- Int largoY
+- Jugador player
+- List<Robot> robots
+- List<Vec2D> fuegos
+- Int cantRobotX1min
+- Int cantRobotX2min
+
+- crearRobots(Int,Int)
+- posDesocupada(List<Vec2D>):Vec2D
+- colisionarRobots()
+- incendiarRobots(Robot)
+- matarRobots(Robot,Robot): Boolean
++ starPoint(Int nivel)
++ moverJugador(Vec2D)
++ posJug(): Vec2D
++ vectorRandom(): Vec2D
++ perseguirJugador()
++ Boolean win()
++ Boolean lose()
+
+}
+
+
+Tablero..>Vec2D
+Tablero*-->Robot
+Tablero*-->Jugador
+Tablero<--* GameState
+
+class GameState{
+- Int puntuation
+- Tablero tabble
+- Int cantSafeTeleport
+- Int nivel
++ actualizarEstadoJuego()
++ starLevel()
++ gameOver()
++ nextLevel()
+- posicionarEscena()
++ realizarJugada()
++ update(Accion)
++ getMainPosition():Vec2D
+}
+
+
+note right of GameState::starLevel
+llama a starPoint
+end note
+note right of GameState::actualizarEstadoJuego
+calcula nivel (usa tablero)
+end note 
+note left of Tablero::win
+se llama constantemente
+end note
+note right of GameState::nivel 
+inicia en uno
+end note 
+
+
+
+interface Action{
+aplicar(GameState)
+}
+
+
+class AccionTeleport{
+- Vec2D newPosition
+
+}
+class AccionMovimiento{
+- Vec2D direction
+}
+
+AccionTeleportRandom..|> Action
+AccionTeleport..|>Action
+AccionMovimiento..|>Action
+
+
+note left of AccionTeleport
+necesita una posicion para su constriucciï¿½n
+end note
+
+note left of Tablero::starPoint
+posiciones aleatorias
+end note
+
+@enduml
