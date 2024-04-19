@@ -21,7 +21,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
 
-        Ej
+
     }
 
     public static void main(String[] args) {
