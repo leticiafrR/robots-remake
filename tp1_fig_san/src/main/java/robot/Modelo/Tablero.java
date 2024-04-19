@@ -38,7 +38,7 @@ public class Tablero {
         player.moverse(new Vec2D(largoX /2,largoY/2));
         fuegos = new ArrayList<>();
         robots = new ArrayList<>();
-        crearRobots(cantRobotX1min+nivel,cantRobotX2min +(nivel%2));
+        crearRobots(cantRobotX1min+nivel,cantRobotX2min + (nivel/2));
     }
 
     private void crearRobots (int cantX1, int cantX2){
@@ -64,13 +64,14 @@ public class Tablero {
 
     //elimina robots colisionados, crea fuegos
     private void colisionarRobots(){
-        HashSet<Vec2D> posicionesRobots = new HashSet<>();
+        ArrayList<Vec2D> posicionesRobots = new ArrayList<>();
         for (Robot robot: robots) {
-            if (posicionesRobots.contains(robot.getPosicion()) || ) {
+            if (robot.getPosicion().estaContenido(posicionesRobots)) {
                 matarRobot(robot);
             }
             posicionesRobots.add(robot.getPosicion());
         }
+        for (Robot robot)
     }
     private void matarRobot(Robot robot){
         robots.remove(robot);
