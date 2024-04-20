@@ -1,6 +1,6 @@
 package robot.Modelo.Personajes;
 
-import robot.Modelo.Vec2D;
+import robot.Vec2D;
 
 public abstract class Personaje {
     private Vec2D posicion;

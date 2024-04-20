@@ -1,6 +1,6 @@
 package robot.Modelo.Personajes;
 
-import robot.Modelo.Vec2D;
+import robot.Vec2D;
 
 public class Robot extends Personaje{
     public Robot(Vec2D posicion){

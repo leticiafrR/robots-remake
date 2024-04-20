@@ -1,6 +1,10 @@
 package robot.Modelo;
 
 import robot.Modelo.Acciones.Action;
+import robot.Vec2D;
+
+import java.util.ArrayList;
+
 public class EstadoDeJuego {
     private int puntuacion;
     private Tablero tablero;
@@ -56,6 +60,18 @@ public class EstadoDeJuego {
     }
     public Vec2D vecRandom(){
         return tablero.vectorRandom();
+    }
+
+    public ArrayList<Vec2D> posicionesFuego(){
+        return tablero.getFuegos();
+    }
+
+    public ArrayList<Vec2D> posicionesRobotsX1(){
+        return tablero.getPosicionesRobotX1();
+    }
+
+    public ArrayList<Vec2D> posicionesRobotsX2(){
+        return tablero.getPosicionesRobotX2();
     }
     public int getPuntuacion() {
         return puntuacion;

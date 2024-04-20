@@ -1,0 +1,112 @@
+package robot.GUI;
+
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.text.TextAlignment;
+import robot.Modelo.Acciones.*;
+import robot.Modelo.EstadoDeJuego;
+
+public class PanelPosterior {
+    private Button tpRandom;
+    private Button tpSafe;
+    private Button esperar;
+    private Label score;//?????
+    private Label nivel;
+    public PanelPosterior(){
+
+        tpRandom= new Button("TPRandom");
+        tpSafe= new Button("TPSafe");
+        esperar= new Button("Esperar");
+        score= new Label("score: ");
+        nivel= new Label("Nivel: ");
+
+        configPredet(tpRandom);
+        configPredet(tpSafe);
+        configPredet(esperar);
+        configPredet(score);
+        configPredet(nivel);
+    }
+
+    private void configPredet(Button n){
+        n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+        n.setTextAlignment(TextAlignment.CENTER);
+
+    }
+    private void configPredet(Label n){
+        n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+        n.setTextAlignment(TextAlignment.CENTER);
+    }
+    public HBox crearHBox(){
+        HBox panelAbajo= new HBox();
+        HBox.setHgrow(tpRandom, Priority.ALWAYS);
+        HBox.setHgrow(tpSafe, Priority.ALWAYS);
+        HBox.setHgrow(esperar, Priority.ALWAYS);
+        HBox.setHgrow(score, Priority.ALWAYS);
+        HBox.setHgrow(nivel, Priority.ALWAYS);
+        panelAbajo.getChildren().add(tpRandom);
+        panelAbajo.getChildren().add(tpSafe);
+        panelAbajo.getChildren().add(esperar);
+        panelAbajo.getChildren().add(score);
+        panelAbajo.getChildren().add(nivel);
+        return panelAbajo;
+    }
+
+    public void controladorPanelpos(EstadoDeJuego e, Grilla grilla){
+        tpRandom.setOnAction(actionEvent -> {
+            AccionTeleportRandom accion = new AccionTeleportRandom();
+            e.update(accion);
+        });
+        tpSafe.setOnAction(actionEvent -> {
+            grilla.escucharTP();
+        });
+        esperar.setOnAction(actionEvent -> {
+            AccionMovimiento accion= new AccionMovimiento(0,0);
+            e.update(accion);
+        });
+    }
+    //TPSAFE-> CLICKGRILLA (VEC2D)-> ACCIONTPSAFE(X,Y)...
+    //TPSAFE-> GRILLA.TPSAFE(TRUE)
+
+    //CLICKENGRILLA (VEC2D)--- TRUE{ACCION(VEC2D) TPSAFE(FALSE)}SINO{ACCION(A
+    public Button getTpRandom() {
+        return tpRandom;
+    }
+
+    public void setTpRandom(Button tpRandom) {
+        this.tpRandom = tpRandom;
+    }
+
+    public Button getTpSafe() {
+        return tpSafe;
+    }
+
+    public void setTpSafe(Button tpSafe) {
+        this.tpSafe = tpSafe;
+    }
+
+    public Button getEsperar() {
+        return esperar;
+    }
+
+    public void setEsperar(Button esperar) {
+        this.esperar = esperar;
+    }
+
+    public Label getScore() {
+        return score;
+    }
+
+    public void setScore(Label score) {
+        this.score = score;
+    }
+
+    public Label getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(Label nivel) {
+        this.nivel = nivel;
+    }
+}
