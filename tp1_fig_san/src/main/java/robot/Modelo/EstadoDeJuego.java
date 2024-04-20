@@ -1,6 +1,8 @@
 package robot.Modelo;
 
 import robot.Modelo.Acciones.Action;
+import robot.Modelo.Personajes.RobotX1;
+import robot.Modelo.Personajes.RobotX2;
 import robot.Vec2D;
 
 import java.util.ArrayList;
@@ -15,9 +17,11 @@ public class EstadoDeJuego {
     public EstadoDeJuego(int largoX, int largoY){
         reset(largoX,largoY);
     }
+
     public void startGame(){
         tablero.startPoint(nivel);
     }
+
     public void reset(int largoX, int largoY){
         puntuacion=0;
         cantSafeTeleport=1;
@@ -58,6 +62,7 @@ public class EstadoDeJuego {
     public Vec2D posicionJugador(){
         return tablero.posJug();
     }
+
     public Vec2D vecRandom(){
         return tablero.vectorRandom();
     }
@@ -66,13 +71,12 @@ public class EstadoDeJuego {
         return tablero.getFuegos();
     }
 
-    public ArrayList<Vec2D> posicionesRobotsX1(){
-        return tablero.getPosicionesRobotX1();
-    }
+    public ArrayList<Vec2D> posicionesRobotsX1() { return tablero.getPosicionesRobot(RobotX1.class);}
 
     public ArrayList<Vec2D> posicionesRobotsX2(){
-        return tablero.getPosicionesRobotX2();
+        return tablero.getPosicionesRobot(RobotX2.class);
     }
+
     public int getPuntuacion() {
         return puntuacion;
     }

@@ -119,24 +119,16 @@ public class Tablero {
         return robots;
     }
 
-    public ArrayList<Vec2D> getPosicionesRobotX1(){
+    public ArrayList<Vec2D> getPosicionesRobot(Class claseBuscada){
         ArrayList<Vec2D> pos= new ArrayList<>();
         for(Robot r: robots){
-            if (r.getClass()== RobotX1.class){
+            if (r.getClass()== claseBuscada){
                 pos.add(r.getPosicion());
             }
         }
         return pos;
     }
-    public ArrayList<Vec2D> getPosicionesRobotX2(){
-        ArrayList<Vec2D> pos= new ArrayList<>();
-        for(Robot r: robots){
-            if (r.getClass()== RobotX2.class){
-                pos.add(r.getPosicion());
-            }
-        }
-        return pos;
-    }
+
     public ArrayList<Vec2D> getFuegos() {
         return fuegos;
     }

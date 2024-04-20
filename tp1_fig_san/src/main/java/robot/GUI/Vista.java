@@ -1,16 +1,25 @@
 package robot.GUI;
 
 import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import robot.Modelo.Acciones.AccionMovimiento;
 import robot.Modelo.Acciones.AccionStartGame;
 import robot.Modelo.Acciones.Action;
 import robot.Modelo.EstadoDeJuego;
+import robot.Modelo.Tablero;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class Vista {
@@ -26,30 +35,21 @@ public class Vista {
     private Stage window;
     private Scene actualScene;
     private EstadoDeJuego gameState;
-    private Group root;
-    private String nombreApp = "ROBOT";
     private int largoX = 20;
     private int largoY = 20;
+    private String nombreApp ="ROBOT";
 
     public Vista(Stage stage) {
         window = stage;
-        //actualScene = setPrincipalScene();
-        actualScene = setFirstScene(new);
     }
 
-    private Scene setFirstScene(){
-        Group root = new Group();
 
+    private void addChildrrens(Pane root, ArrayList<Node> hijos){
+        for (Node n: hijos){
+            root.getChildren().add(n);
+        }
     }
-    private Scene setPrincipalScene(){
-        //desarrollo arbol de escena principal (parte desde raiz)
-        root = new Group();
-        root.getChildren().add(textPrincipal());
-        root.getChildren().add(lineaMedia());
 
-        //trabajando escena que contendrá el arbol
-        return  new Scene(root, 600, 600, Color.PURPLE);
-    }
     private void setStage(){
         window.setTitle(nombreApp);
         Image icon = new Image("icon.png");//este es un nodo que se conecta al stage

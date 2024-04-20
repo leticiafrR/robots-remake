@@ -72,7 +72,6 @@ public class Grilla {
         tablero.getCellBounds(1, 2);
         for(Node r: tablero.getChildren()){
             ((Rectangle) r).setFill(Color.TRANSPARENT);
-
         }
         colocarImagen(e.posicionesRobotsX1(), "robotx1");
         colocarImagen(e.posicionesRobotsX2(), "robotx2");
