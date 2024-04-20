@@ -1,4 +1,4 @@
-package robot.GUI.imagen;
+package robot.GUI;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
