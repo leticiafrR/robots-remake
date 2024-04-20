@@ -16,7 +16,7 @@ public class RobotApp extends Application {
 
     @Override
     public void start(Stage stage) {
-        Vista vista = new Vista();
+        Vista vista = new Vista(stage);
         EstadoDeJuego game = null;
 
 
