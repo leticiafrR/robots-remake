@@ -29,7 +29,7 @@ public class Vista {
             KeyCode.RIGHT, new AccionMovimiento(+1,0),
             KeyCode.UP,new AccionMovimiento(0,1),
             KeyCode.DOWN, new AccionMovimiento(0,-1),
-            KeyCode.ENTER, new AccionMovimiento(0,0),
+            KeyCode.ENTER, new AccionMovimiento(0,0)
 //            KeyCode.R, new AccionStartGame()
     );
     private Stage window;
