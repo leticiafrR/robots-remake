@@ -1,6 +1,8 @@
 package robot.Modelo;
 
 import robot.Modelo.Personajes.*;
+import robot.Vec2D;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -12,6 +14,7 @@ public class Tablero {
     // se actualiza en cada startPoint
     private Jugador player;
     private ArrayList<Robot> robots ;
+
     private ArrayList<Vec2D> fuegos;
 
 
@@ -114,5 +117,27 @@ public class Tablero {
 
     public ArrayList<Robot> getRobots() {
         return robots;
+    }
+
+    public ArrayList<Vec2D> getPosicionesRobotX1(){
+        ArrayList<Vec2D> pos= new ArrayList<>();
+        for(Robot r: robots){
+            if (r.getClass()== RobotX1.class){
+                pos.add(r.getPosicion());
+            }
+        }
+        return pos;
+    }
+    public ArrayList<Vec2D> getPosicionesRobotX2(){
+        ArrayList<Vec2D> pos= new ArrayList<>();
+        for(Robot r: robots){
+            if (r.getClass()== RobotX2.class){
+                pos.add(r.getPosicion());
+            }
+        }
+        return pos;
+    }
+    public ArrayList<Vec2D> getFuegos() {
+        return fuegos;
     }
 }

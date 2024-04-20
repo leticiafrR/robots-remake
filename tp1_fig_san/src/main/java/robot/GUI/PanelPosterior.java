@@ -1,19 +1,20 @@
 package robot.GUI;
 
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.text.TextAlignment;
+import robot.Modelo.Acciones.*;
+import robot.Modelo.EstadoDeJuego;
 
-public class PanelAbajo{
+public class PanelPosterior {
     private Button tpRandom;
     private Button tpSafe;
     private Button esperar;
-    private Label score;
+    private Label score;//?????
     private Label nivel;
-    public PanelAbajo(){
+    public PanelPosterior(){
 
         tpRandom= new Button("TPRandom");
         tpSafe= new Button("TPSafe");
@@ -31,6 +32,7 @@ public class PanelAbajo{
     private void configPredet(Button n){
         n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         n.setTextAlignment(TextAlignment.CENTER);
+
     }
     private void configPredet(Label n){
         n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
@@ -51,6 +53,23 @@ public class PanelAbajo{
         return panelAbajo;
     }
 
+    public void controladorPanelpos(EstadoDeJuego e, Grilla grilla){
+        tpRandom.setOnAction(actionEvent -> {
+            AccionTeleportRandom accion = new AccionTeleportRandom();
+            e.update(accion);
+        });
+        tpSafe.setOnAction(actionEvent -> {
+            grilla.escucharTP();
+        });
+        esperar.setOnAction(actionEvent -> {
+            AccionMovimiento accion= new AccionMovimiento(0,0);
+            e.update(accion);
+        });
+    }
+    //TPSAFE-> CLICKGRILLA (VEC2D)-> ACCIONTPSAFE(X,Y)...
+    //TPSAFE-> GRILLA.TPSAFE(TRUE)
+
+    //CLICKENGRILLA (VEC2D)--- TRUE{ACCION(VEC2D) TPSAFE(FALSE)}SINO{ACCION(A
     public Button getTpRandom() {
         return tpRandom;
     }

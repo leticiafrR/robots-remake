@@ -1,6 +1,7 @@
 package robot.Modelo.Acciones;
 
 import robot.Modelo.*;
+import robot.Vec2D;
 
 public class AccionMovimiento implements Action{
     private Vec2D direccion;
