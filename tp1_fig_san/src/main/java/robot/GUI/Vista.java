@@ -70,10 +70,12 @@ public class Vista {
 
     private void setStage(){
         window.setTitle(nombreApp);
+        /*
         Image icon = new Image("icon.png");
         window.getIcons().add(icon);
         window.setHeight(600);
         window.setWidth(600);
+         */
         window.setResizable(false);
         window.setX(500);
         window.setY(50);

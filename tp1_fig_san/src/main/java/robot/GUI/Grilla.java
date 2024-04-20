@@ -12,6 +12,7 @@ import robot.Modelo.Acciones.Action;
 import robot.Modelo.EstadoDeJuego;
 import robot.Vec2D;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
@@ -45,8 +46,6 @@ public class Grilla {
                 celda.setOnMouseClicked(event-> mover(pos,e));
             }
         }
-
-        Rectangle r = (Rectangle) tablero.lookup(idUnico(1,1));
     }
     private String idUnico(int i, int j){
         return String.format("#%d%d",i,j);
@@ -79,19 +78,19 @@ public class Grilla {
         for(Node r: tablero.getChildren()){
             ((Rectangle) r).setFill(Color.BLUE);
         }
-        colocarImagen(e.posicionesRobotsX1(), "robotx1");
-        colocarImagen(e.posicionesRobotsX2(), "robotx2");
-        colocarImagen(e.posicionesFuego(), "fuego");
+        colocarImagen(e.posicionesRobotsX1(), "robotx1.png");
+        colocarImagen(e.posicionesRobotsX2(), "robotx2.png");
+        colocarImagen(e.posicionesFuego(), "fuego.png");
         ArrayList<Vec2D> jugador= new ArrayList<>();
         jugador.add(e.posicionJugador());
-        colocarImagen(jugador, "player");
+        colocarImagen(jugador, "player.png");
     }
 
     private void colocarImagen(ArrayList<Vec2D> p, String nombre){
         for(Vec2D pint: p){
             int x= (int) pint.getX();
             int y= (int) pint.getY();
-            Image imagen= new Image("imagen/"+nombre+".png");
+            Image imagen= new Image(nombre);
             ((Rectangle) tablero.lookup(idUnico(x,y))).setFill(new ImagePattern(imagen));
         }
     }

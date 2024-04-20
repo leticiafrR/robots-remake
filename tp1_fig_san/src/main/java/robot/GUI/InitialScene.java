@@ -79,7 +79,7 @@ public class InitialScene{
         vb.setSpacing(30);
         vb.setAlignment(Pos.CENTER);
         vb.getChildren().addAll(hb1,hb2,botonJugar);
-        mainScene = new Scene(vb,600,50, Color.PURPLE);
+        mainScene = new Scene(vb,600,600, Color.PURPLE);
     }
 
     //PRE:
