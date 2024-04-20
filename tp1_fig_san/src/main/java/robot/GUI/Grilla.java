@@ -49,7 +49,7 @@ public class Grilla {
         Action accion;
         if (escuchandoTP){
             accion= new AccionMovimiento(pos.getX(), pos.getY());
-            escuchandoTP= false;
+            escuchandoTP=!escuchandoTP;
         }else{
             Vec2D mov= pos.restarCon(e.posicionJugador());
             double dx= asignarDiferenciales(mov.getX());
@@ -69,7 +69,6 @@ public class Grilla {
 
     public void pintarGrilla(EstadoDeJuego e){
         ArrayList<Rectangle> r1= new ArrayList<>();
-        tablero.getCellBounds(1, 2);
         for(Node r: tablero.getChildren()){
             ((Rectangle) r).setFill(Color.TRANSPARENT);
         }
@@ -80,6 +79,7 @@ public class Grilla {
         jugador.add(e.posicionJugador());
         colocarImagen(jugador, "player");
     }
+
     private void colocarImagen(ArrayList<Vec2D> p, String nombre){
         for(Vec2D pint: p){
             int x= (int) pint.getX();
