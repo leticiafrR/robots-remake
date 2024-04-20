@@ -8,6 +8,9 @@ public class AccionTeleport implements Action{
     public AccionTeleport(double x, double y){
         nuevaPosicion= new Vec2D(x,y);
     }
+
+    //PRE: e inicializado
+    //POST: realiza la jugada (Mueve al jugador hacia la posicion indicada)
     @Override
     public void aplicar(EstadoDeJuego e) {
         e.realizarJugada(nuevaPosicion);

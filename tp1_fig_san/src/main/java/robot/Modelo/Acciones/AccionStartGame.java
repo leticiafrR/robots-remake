@@ -12,6 +12,8 @@ public class AccionStartGame implements Action{
         this.tamY = tamY;
     }
 
+    //PRE: e inicializado
+    //POST: Ejecuta el reset (reinicia el juego)
     @Override
     public void aplicar(EstadoDeJuego e) {
         e.reset(tamX,tamY);

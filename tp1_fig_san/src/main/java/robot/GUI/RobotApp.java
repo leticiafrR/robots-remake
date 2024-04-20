@@ -17,14 +17,6 @@ public class RobotApp extends Application {
     @Override
     public void start(Stage stage) {
         Vista vista = new Vista(stage);
-        EstadoDeJuego game = null;
-
-
-        var label = new Label("Hello, JavaFX "  + ", running on Java "  + ".");
-        var scene = new Scene(new StackPane(label), 640, 480);
-        stage.setScene(scene);
-        stage.show();
-
     }
 
     public static void main(String[] args) {

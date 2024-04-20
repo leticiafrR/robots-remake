@@ -1,12 +1,13 @@
 package robot.GUI;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.text.TextAlignment;
 import robot.Modelo.Acciones.*;
-import robot.Modelo.EstadoDeJuego;
+import robot.Modelo.*;
 
 public class PanelPosterior {
     private Button tpRandom;
@@ -16,11 +17,11 @@ public class PanelPosterior {
     private Label nivel;
     public PanelPosterior(){
 
-        tpRandom= new Button("TPRandom");
-        tpSafe= new Button("TPSafe");
-        esperar= new Button("Esperar");
-        score= new Label("score: ");
-        nivel= new Label("Nivel: ");
+        tpRandom= new Button(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TLP_RANDOM));
+        tpSafe= new Button(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TP_SAFE));
+        esperar= new Button(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.ESPERAR));
+        score= new Label(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.SCORE));
+        nivel= new Label(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.NIVEL));
 
         configPredet(tpRandom);
         configPredet(tpSafe);
@@ -29,16 +30,25 @@ public class PanelPosterior {
         configPredet(nivel);
     }
 
+
+    //PRE: boton n inicializado
+    //POST: le asigna la configuracion predeterminada para que se adapte al HBox
     private void configPredet(Button n){
         n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         n.setTextAlignment(TextAlignment.CENTER);
 
     }
+
+    //PRE: etiqueta n inicializado
+    //POST: le asigna la configuracion predeterminada para que se adapte al HBox
     private void configPredet(Label n){
         n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         n.setTextAlignment(TextAlignment.CENTER);
     }
-    public HBox crearHBox(){
+
+    //PRE: Estado de juego y grilla ya inicializados
+    //POST: Devuelve el panel de botones ya configurado
+    public HBox crearHBox(EstadoDeJuego e, Grilla grilla){
         HBox panelAbajo= new HBox();
         HBox.setHgrow(tpRandom, Priority.ALWAYS);
         HBox.setHgrow(tpSafe, Priority.ALWAYS);
@@ -50,13 +60,17 @@ public class PanelPosterior {
         panelAbajo.getChildren().add(esperar);
         panelAbajo.getChildren().add(score);
         panelAbajo.getChildren().add(nivel);
+        controladorPanelpos(e, grilla);
         return panelAbajo;
     }
 
+    //PRE: Estado de juego y grilla ya inicializados
+    //POST: Asigna comportamientos a los botones del panel
     public void controladorPanelpos(EstadoDeJuego e, Grilla grilla){
         tpRandom.setOnAction(actionEvent -> {
             AccionTeleportRandom accion = new AccionTeleportRandom();
             e.update(accion);
+            grilla.pintarGrilla(e);
         });
         tpSafe.setOnAction(actionEvent -> {
             grilla.escucharTP();
@@ -64,8 +78,10 @@ public class PanelPosterior {
         esperar.setOnAction(actionEvent -> {
             AccionMovimiento accion= new AccionMovimiento(0,0);
             e.update(accion);
+            grilla.pintarGrilla(e);
         });
     }
+
     //TPSAFE-> CLICKGRILLA (VEC2D)-> ACCIONTPSAFE(X,Y)...
     //TPSAFE-> GRILLA.TPSAFE(TRUE)
 

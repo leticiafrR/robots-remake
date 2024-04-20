@@ -1,7 +1,9 @@
 package robot.GUI;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
@@ -11,20 +13,21 @@ import robot.Modelo.EstadoDeJuego;
 import robot.Vec2D;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.Vector;
 
 public class Grilla {
-    GridPane tablero = new GridPane();
+    private GridPane tablero = new GridPane();
     boolean escuchandoTP = false;
 
     private int largoX;
     private int largoY;
     public void escucharTP(){ escuchandoTP=true;}
 
-    public Grilla(int cantX, int cantY){
+    public Grilla(int cantX, int cantY, EstadoDeJuego e){
         largoX=cantX;
         largoY=cantY;
-
+        setTable(e);
     }
     private void setTable(EstadoDeJuego e){
         double anchoCelda = 30;
@@ -33,6 +36,10 @@ public class Grilla {
             for(int j = 0; j<largoY;j++){
                 Rectangle celda = new Rectangle(anchoCelda,largoCelda,Color.BLUE);
                 celda.setId(idUnico(i,j));
+                celda.setHeight(Double.MAX_VALUE); //Revisar Como se adaptan en la grilla
+                celda.setWidth(Double.MAX_VALUE);  // ''      ''  ''  ''    ''  ''     ''
+                GridPane.setVgrow(celda, Priority.ALWAYS);
+                GridPane.setHgrow(celda, Priority.ALWAYS);
                 tablero.add(celda,i,j);
                 Vec2D pos = new Vec2D(i,j);
                 celda.setOnMouseClicked(event-> mover(pos,e));
@@ -45,7 +52,7 @@ public class Grilla {
         return String.format("#%d%d",i,j);
     }
 
-    private void mover(Vec2D pos,EstadoDeJuego e){
+    private void mover(Vec2D pos, EstadoDeJuego e){
         Action accion;
         if (escuchandoTP){
             accion= new AccionMovimiento(pos.getX(), pos.getY());
@@ -57,6 +64,7 @@ public class Grilla {
             accion= new AccionMovimiento(dx,dy);
         }
         e.update(accion);
+        pintarGrilla(e);
     }
     private double asignarDiferenciales(double d){
         if (d>1){
@@ -68,9 +76,8 @@ public class Grilla {
     }
 
     public void pintarGrilla(EstadoDeJuego e){
-        ArrayList<Rectangle> r1= new ArrayList<>();
         for(Node r: tablero.getChildren()){
-            ((Rectangle) r).setFill(Color.TRANSPARENT);
+            ((Rectangle) r).setFill(Color.BLUE);
         }
         colocarImagen(e.posicionesRobotsX1(), "robotx1");
         colocarImagen(e.posicionesRobotsX2(), "robotx2");
@@ -87,5 +94,9 @@ public class Grilla {
             Image imagen= new Image("imagen/"+nombre+".png");
             ((Rectangle) tablero.lookup(idUnico(x,y))).setFill(new ImagePattern(imagen));
         }
+    }
+
+    public GridPane getTablero() {
+        return tablero;
     }
 }

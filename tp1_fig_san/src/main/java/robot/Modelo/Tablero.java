@@ -26,6 +26,9 @@ public class Tablero {
     private int cantRobotX2min;
 
 
+    //PRE:
+    //POST: calcula la cantidad de robots x1 y x2 segun la proporcion y el tamaño del tablero
+    //      crea y posiciona al jugador
     public Tablero(int largoX, int largoY){
         Tablero.largoX = largoX;
         Tablero.largoY = largoY;
@@ -34,6 +37,8 @@ public class Tablero {
         cantRobotX1min = ((proportion[(Proportions.X1).ordinal()] * (largoX*largoY))/ proportion[(Proportions.CELDAS).ordinal()]);
     }
 
+    //PRE: nivel mayor que 0
+    //POST: incializa y da posicion a los robots, mueve al jugador al medio
     public void startPoint(int nivel){
         player.moverse(new Vec2D(largoX /2,largoY/2));
         fuegos = new ArrayList<>();
@@ -41,6 +46,8 @@ public class Tablero {
         crearRobots(cantRobotX1min+nivel,cantRobotX2min + (nivel/2));
     }
 
+    //PRE:
+    //POST: Crea los robots y les da posiciones desocupadas
     private void crearRobots (int cantX1, int cantX2){
         ArrayList<Vec2D> posicionesRobots = new ArrayList<>();
         for (int i = 0;i< cantX1;i++){
@@ -54,6 +61,9 @@ public class Tablero {
             posicionesRobots.add(pos);
         }
     }
+
+    //PRE: posOcupadas incializada con posiciones ocupadas dentro del tablero
+    //POST: Devuelve una posicion desocupada dentro del tablero
     private Vec2D posDesocupada(ArrayList<Vec2D> posOcupadas){
         Vec2D nuevaPosRobot = vectorRandom();
         while (nuevaPosRobot.estaContenido(posOcupadas) || nuevaPosRobot.equals(player.getPosicion())){
@@ -62,7 +72,8 @@ public class Tablero {
         return nuevaPosRobot;
     }
 
-
+    //PRE: robots inicializados
+    //POST: los robots persiguen al jugador y los colisiona
     public void perseguirJugador(){
         for (Robot robot: robots){
             robot.perseguirPosicion(player.getPosicion());
@@ -70,6 +81,8 @@ public class Tablero {
         colisionarRobots();
     }
 
+    //PRE: robots inicializados
+    //POST: incendia a los robots que colisionaron, añade sus posiciones a fuegos y los elimina
     private void colisionarRobots(){
         for (Robot r1: robots) {
             if (incendiarRobot(r1)){continue;}
@@ -78,6 +91,9 @@ public class Tablero {
             }
         }
     }
+
+    //PRE: robot inicializado
+    //POST: incendia al robot si no habia fuego en su posicion, si no, lo elimina de robots
     private boolean incendiarRobot(Robot r){
         for (Vec2D f: fuegos){
             if (r.getPosicion().equals(f)){
@@ -87,6 +103,9 @@ public class Tablero {
         }
         return false;
     }
+
+    //PRE: robots inicializados
+    //POST: elimina a los si colisionaron
     private boolean matarRobots(Robot r1,Robot r2){
         if (r1.getPosicion().equals(r2.getPosicion())){
             robots.remove(r2);
@@ -96,12 +115,18 @@ public class Tablero {
         return false;
     }
 
+    //PRE:
+    //POST:
     public void moverJugador(Vec2D posicion){
         player.moverse(player.getPosicion().sumarCon(posicion));
     }
 
+    //PRE:
+    //POST: indica si no queda ningun robot en el tablero
     public boolean win() { return robots.isEmpty(); }
 
+    //PRE:
+    //POST: indica si el jugador colisiono con un robot o fuego
     public boolean lose(){
         for (Robot r: robots){
             if (r.getPosicion().equals(player.getPosicion())) { return true;}
@@ -111,14 +136,19 @@ public class Tablero {
         }
         return false;
     }
+
+    //PRE:
+    //POST:
     public Vec2D posJug() { return player.getPosicion(); }
-    public Vec2D vectorRandom() { return new Vec2D(rand.nextDouble(largoX),rand.nextDouble(largoY)); }
+    public Vec2D vectorRandom() { return new Vec2D(rand.nextInt(largoX),rand.nextInt(largoY)); }
     public Jugador getPlayer() { return player;}
 
     public ArrayList<Robot> getRobots() {
         return robots;
     }
 
+    //PRE: clasebuscada es una clase valida para buscar
+    //POST: devuelve las posiciones de los robot depende de su categoria (x1 o x2)
     public ArrayList<Vec2D> getPosicionesRobot(Class claseBuscada){
         ArrayList<Vec2D> pos= new ArrayList<>();
         for(Robot r: robots){
@@ -129,6 +159,8 @@ public class Tablero {
         return pos;
     }
 
+    //PRE:
+    //POST: Devuelve las posiciones de los fuegos
     public ArrayList<Vec2D> getFuegos() {
         return fuegos;
     }

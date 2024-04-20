@@ -5,9 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="agregando escena inicial">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/RobotApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/RobotApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionMovimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionMovimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionStartGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionStartGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleportRandom.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleportRandom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Personajes/Fuego.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Personajes/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Personajes/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Personajes/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Personajes/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Personajes/RobotX2.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Personajes/RobotX2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Vec2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Vec2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Acciones/AccionMovimiento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Acciones/AccionStartLevel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Acciones/AccionTeleport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Acciones/AccionTeleportRandom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Acciones/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/EstadoDeJuego.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Personajes/Fuego.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Personajes/Jugador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Personajes/Personaje.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Personajes/Robot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Personajes/RobotX1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Personajes/RobotX2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Tablero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/Vector2D.class" beforeDir="false" />
     </list>
-    <list id="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" name="Changes by Usuario" comment="" />
+    <list id="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" name="Changes by Usuario" comment="">
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +79,76 @@
     &quot;accountId&quot;: &quot;11ceb746-25d6-403d-9232-db59ef0191e1&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java">
+      <ranges>
+        <range start1="11" end1="11" start2="11" end2="14" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="12" end1="17" start2="15" end2="21" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="18" end1="23" start2="22" end2="33" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="24" end1="25" start2="34" end2="36" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="26" end1="28" start2="37" end2="46" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="29" end1="35" start2="47" end2="68" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="37" end1="37" start2="70" end2="86" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="44" end1="45" start2="93" end2="95" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="46" end1="47" start2="96" end2="97" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="50" end1="51" start2="100" end2="103" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="52" end1="53" start2="104" end2="105" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java">
+      <ranges>
+        <range start1="15" end1="15" start2="15" end2="17" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="16" end1="16" start2="18" end2="24" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="20" end1="20" start2="28" end2="30" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="24" end1="24" start2="34" end2="36" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="29" end1="29" start2="41" end2="42" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="31" end1="31" start2="44" end2="47" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="35" end1="36" start2="51" end2="52" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="38" end1="38" start2="54" end2="57" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="42" end1="42" start2="61" end2="64" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="47" end1="52" start2="69" end2="71" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="57" end1="57" start2="76" end2="79" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="61" end1="61" start2="83" end2="86" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="65" end1="65" start2="90" end2="92" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="69" end1="69" start2="96" end2="98" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="73" end1="73" start2="102" end2="104" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="75" end1="75" start2="106" end2="108" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="79" end1="79" start2="112" end2="123" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="8" end1="9" start2="9" end2="10" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="18" end1="23" start2="19" end2="24" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="31" end1="31" start2="32" end2="35" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="36" end1="36" start2="40" end2="43" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="40" end1="41" start2="47" end2="51" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="52" end1="52" start2="62" end2="63" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="55" end1="55" start2="66" end2="68" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="59" end1="59" start2="72" end2="73" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="66" end1="66" start2="80" end2="81" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="68" end1="68" start2="83" end2="84" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java">
+      <ranges>
+        <range start1="2" end1="5" start2="2" end2="2" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="6" end1="9" start2="3" end2="3" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="11" end1="14" start2="5" end2="5" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="16" end1="17" start2="7" end2="7" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="19" end1="20" start2="9" end2="10" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="21" end1="22" start2="11" end2="11" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="32" end1="32" start2="21" end2="30" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="35" end1="36" start2="33" end2="36" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="37" end1="39" start2="37" end2="38" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="43" end1="43" start2="42" end2="68" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="45" end1="52" start2="70" end2="70" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="54" end1="55" start2="72" end2="73" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+        <range start1="59" end1="62" start2="77" end2="80" changelist="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -53,26 +161,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;pruebasVista&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/aizen/Escritorio/Git/UBA/Paradigmas/TP1_ROBOTS_FIG-SAN/FIG-SAN_TP1_PARADIGMAS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.RobotApp.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "pruebasVista",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/aizen/Escritorio/Git/UBA/Paradigmas/TP1_ROBOTS_FIG-SAN/FIG-SAN_TP1_PARADIGMAS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "CodeWithMe",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="robot.GUI" />
