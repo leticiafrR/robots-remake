@@ -4,6 +4,8 @@ import robot.Modelo.Personajes.*;
 import robot.Vec2D;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Random;
 
 public class Tablero {
@@ -84,41 +86,77 @@ public class Tablero {
     //PRE: robots inicializados
     //POST: incendia a los robots que colisionaron, añade sus posiciones a fuegos y los elimina
     private void colisionarRobots(){
-        for (Robot r1: robots) {
-            if (incendiarRobot(r1)){continue;}
-            for (Robot r2: robots){
-                if (matarRobots(r1,r2)) { fuegos.add(r1.getPosicion());}
+       eliminarIncendiados();
+       eliminarColisionados();
+    }
+    private void eliminarColisionados(){
+        ArrayList<Robot> muertos=new ArrayList<>();
+        int i=0;
+        for (Robot r:robots){
+            int j =0;
+            for (Robot r1: robots){
+                if (( j>i) && r1.getPosicion().equals(r.getPosicion())){muertos.add(r);muertos.add(r1);}
+                j++;
+            }
+            i++;
+        }
+        vaciarMuertos(muertos);
+    }
+    private void eliminarIncendiados(){
+        ArrayList<Robot> muertos=new ArrayList<>();
+        for (Robot r:robots){
+            for (Vec2D f:fuegos){
+                if (f.equals(r.getPosicion())){
+                    muertos.add(r);
+                }
             }
         }
+        vaciarMuertos(muertos);
     }
+
+    private void vaciarMuertos(ArrayList<Robot> muertos){
+        for (Robot r:muertos){
+            fuegos.add(r.getPosicion());
+            robots.remove(r);
+        }
+
+        System.out.println("salgo vaciar");
+
+    }
+
+    /*
+    private void colisionarRobot(Robot robot,ArrayList<Robot> muertos){
+        ArrayList<Integer> indices= new ArrayList<>();
+        for(Robot r: robots){
+            for(Robot r2: robots.subList(robots.indexOf(r)+1,robots.size())){
+                if(r.getPosicion().equals(r2.getPosicion())){
+                    if(!indices.contains(robots.indexOf(r))){
+                        indices.add(robots.indexOf(r));
+                    }
+                    if(!indices.contains(robots.indexOf(r2))){
+                        indices.add(robots.indexOf(r2));
+                    }
+                }
+            }
+        }
+        indices.sort(Collections.reverseOrder());
+    }
+    */
+
+
 
     //PRE: robot inicializado
     //POST: incendia al robot si no habia fuego en su posicion, si no, lo elimina de robots
-    private boolean incendiarRobot(Robot r){
-        for (Vec2D f: fuegos){
-            if (r.getPosicion().equals(f)){
-                robots.remove(r);
-                return true;
-            }
-        }
-        return false;
-    }
+
 
     //PRE: robots inicializados
     //POST: elimina a los si colisionaron
-    private boolean matarRobots(Robot r1,Robot r2){
-        if (r1.getPosicion().equals(r2.getPosicion())){
-            robots.remove(r2);
-            robots.remove(r1);
-            return true;
-        }
-        return false;
-    }
+
 
     //PRE:
     //POST:
     public void moverJugador(Vec2D posicion){
-        player.moverse(player.getPosicion().sumarCon(posicion));
+        player.moverse(posicion);
     }
 
     //PRE:

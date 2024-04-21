@@ -62,8 +62,8 @@ public class EstadoDeJuego {
 
     //PRE: direccion inicializada
     //POST: realiza la jugada y los posiciona
-    private void posicionarScene(Vec2D direccion){
-        tablero.moverJugador(direccion);
+    private void posicionarScene(Vec2D nuevaPosicion){
+        tablero.moverJugador(nuevaPosicion);
         tablero.perseguirJugador();
     }
 
@@ -77,8 +77,8 @@ public class EstadoDeJuego {
 
     //PRE:  direccion inicializada
     //POST:
-    public void realizarJugada(Vec2D direccion){
-        posicionarScene(direccion);
+    public void realizarJugada(Vec2D nuevaPosicion){
+        posicionarScene(nuevaPosicion);
         actualizarEstadoJuego();
     }
 

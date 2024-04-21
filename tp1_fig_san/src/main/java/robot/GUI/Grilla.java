@@ -8,6 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import robot.Modelo.Acciones.AccionMovimiento;
+import robot.Modelo.Acciones.AccionTeleport;
 import robot.Modelo.Acciones.Action;
 import robot.Modelo.EstadoDeJuego;
 import robot.Vec2D;
@@ -30,15 +31,16 @@ public class Grilla {
         largoY=cantY;
         setTable(e);
     }
+
+    //PRE: Estado de juego inicializado
+    //POST: Crea el tablero visual y le asigna comportamiento
     private void setTable(EstadoDeJuego e){
-        double anchoCelda = 30;
-        double largoCelda = 50;
+        double anchoCelda = 25;
+        double largoCelda = 25;
         for (int i = 0;i < largoX;i++){
             for(int j = 0; j<largoY;j++){
                 Rectangle celda = new Rectangle(anchoCelda,largoCelda,Color.BLUE);
                 celda.setId(idUnico(i,j));
-                celda.setHeight(Double.MAX_VALUE); //Revisar Como se adaptan en la grilla
-                celda.setWidth(Double.MAX_VALUE);  // ''      ''  ''  ''    ''  ''     ''
                 GridPane.setVgrow(celda, Priority.ALWAYS);
                 GridPane.setHgrow(celda, Priority.ALWAYS);
                 //tablero.add(celda,i,j);
@@ -49,14 +51,19 @@ public class Grilla {
             }
         }
     }
+
+    //PRE: i y j mayor o igual a 0
+    //POST: devuelve un ID en base a la posicion
     private String idUnico(int i, int j){
         return ("#"+i+"-"+j);
     }
 
+    //PRE:pos y estado de juego inicializado
+    //POST: Asigna el comportamiento de moverse a las celdas seleccionadas y actualiza la tabla
     private void mover(Vec2D pos, EstadoDeJuego e){
         Action accion;
         if (escuchandoTP){
-            accion= new AccionMovimiento(pos.getX(), pos.getY());
+            accion= new AccionTeleport(pos.getX(), pos.getY());
             escuchandoTP=!escuchandoTP;
         }else{
             Vec2D mov= pos.restarCon(e.posicionJugador());
@@ -66,7 +73,12 @@ public class Grilla {
         }
         e.update(accion);
         pintarGrilla(e);
+        System.out.println(e.posicionesRobotsX1().size());
+        System.out.println(e.posicionesFuego());
     }
+
+    //PRE:
+    //POST: devuelve cuantas celdas debe moverse el jugador segun el numero entrante
     private double asignarDiferenciales(double d){
         if (d>1){
             return 1;
@@ -76,6 +88,8 @@ public class Grilla {
         return 0;
     }
 
+    //PRE: Estado de juego inicializado
+    //POST: Actualiza con imagenes la tabla
     public void pintarGrilla(EstadoDeJuego e){
         for(Node r: tablero.getChildren()){
             ((Rectangle) r).setFill(Color.BLUE);
@@ -88,23 +102,24 @@ public class Grilla {
         colocarImagen(jugador, "player.png");
     }
 
+    //PRE:vector p inicializado, nombre de ruta dentro del proyecto
+    //POST: coloca la imagen de la ruta "nombre" en el vector p
     private void colocarImagen(ArrayList<Vec2D> p, String nombre){
         for(Vec2D pint: p){
             int x= (int) pint.getX();
             int y= (int) pint.getY();
             Image imagen= new Image(nombre);
-            //((Rectangle) tablero.lookup(idUnico(x,y))).setFill(new ImagePattern(imagen));
             for(Node r: tablero.getChildren()){
                 if( r.getId().equals(idUnico(x,y))){
                     ((Rectangle) r).setFill(new ImagePattern(imagen));
-                    System.out.println("Pinté"+nombre);
                     break;
                 }
             }
         }
-        System.out.println("Sali de pintar");
     }
 
+    //PRE:
+    //POST:
     public GridPane getTablero() {
         return tablero;
     }

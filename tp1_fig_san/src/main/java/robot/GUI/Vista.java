@@ -60,14 +60,13 @@ public class Vista {
     }
 
     public Scene getmainScene(int filas, int columnas) {
-        return new GameScene(columnas, filas, gameState).getPrincipal();
+        GameScene principal= new GameScene(columnas, filas, gameState);
+        return principal.getPrincipal();
     }
 
 
     public void actualizarPantalla(Scene escena){
-        System.out.println("Entro a cambiar escena");
         window.setScene(escena);
-        System.out.println("Cambio de escena");
     }
 
     private void setStage(){
