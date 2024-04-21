@@ -65,6 +65,7 @@ public class Vista {
 
 
     public void actualizarPantalla(Scene escena){
+        System.out.println("Entro a cambiar escena");
         window.setScene(escena);
         System.out.println("Cambio de escena");
     }
@@ -77,10 +78,10 @@ public class Vista {
         window.setHeight(600);
         window.setWidth(600);
          */
-        window.setResizable(false);
+        //window.setResizable(false);
         window.setX(500);
         window.setY(50);
-        actualizarPantalla(firstScene);
+       // actualizarPantalla(firstScene);
         window.show();
     }
 }
