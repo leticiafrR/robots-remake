@@ -1,15 +1,9 @@
 package robot.GUI;
 
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
-import robot.Modelo.Acciones.AccionMovimiento;
-import robot.Modelo.Acciones.Action;
 import robot.Modelo.EstadoDeJuego;
-import robot.Modelo.ListenerGameOver;
-
-import java.util.Map;
+import robot.Modelo.Listeners.ListenerGameOver;
 
 public class Vista {
 

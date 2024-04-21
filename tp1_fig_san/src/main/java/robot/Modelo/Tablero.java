@@ -16,9 +16,7 @@ public class Tablero {
     // se actualiza en cada startPoint
     private Jugador player;
     private ArrayList<Robot> robots ;
-
     private ArrayList<Vec2D> fuegos;
-
 
     //generacion de robots
     public enum Proportions { X1, X2, CELDAS}
@@ -26,7 +24,6 @@ public class Tablero {
     private final Random rand = new Random();;
     private int cantRobotX1min;
     private int cantRobotX2min;
-
 
     //PRE:
     //POST: calcula la cantidad de robots x1 y x2 segun la proporcion y el tamaño del tablero
@@ -89,6 +86,9 @@ public class Tablero {
        eliminarIncendiados();
        eliminarColisionados();
     }
+
+    //PRE:
+    //POST: encuentra los robots que colisionaron y los manda a eliminar
     private void eliminarColisionados(){
         ArrayList<Robot> muertos=new ArrayList<>();
         int i=0;
@@ -102,6 +102,9 @@ public class Tablero {
         }
         vaciarMuertos(muertos);
     }
+
+    //PRE:
+    //POST: Encuentra los robots que colisionan con fuego y los manda a eliminar
     private void eliminarIncendiados(){
         ArrayList<Robot> muertos=new ArrayList<>();
         for (Robot r:robots){
@@ -114,44 +117,14 @@ public class Tablero {
         vaciarMuertos(muertos);
     }
 
+    //PRE:
+    //POST: Elimina los robots muertos y pone un fuego en su lugar
     private void vaciarMuertos(ArrayList<Robot> muertos){
         for (Robot r:muertos){
             fuegos.add(r.getPosicion());
             robots.remove(r);
         }
-
-        System.out.println("salgo vaciar");
-
     }
-
-    /*
-    private void colisionarRobot(Robot robot,ArrayList<Robot> muertos){
-        ArrayList<Integer> indices= new ArrayList<>();
-        for(Robot r: robots){
-            for(Robot r2: robots.subList(robots.indexOf(r)+1,robots.size())){
-                if(r.getPosicion().equals(r2.getPosicion())){
-                    if(!indices.contains(robots.indexOf(r))){
-                        indices.add(robots.indexOf(r));
-                    }
-                    if(!indices.contains(robots.indexOf(r2))){
-                        indices.add(robots.indexOf(r2));
-                    }
-                }
-            }
-        }
-        indices.sort(Collections.reverseOrder());
-    }
-    */
-
-
-
-    //PRE: robot inicializado
-    //POST: incendia al robot si no habia fuego en su posicion, si no, lo elimina de robots
-
-
-    //PRE: robots inicializados
-    //POST: elimina a los si colisionaron
-
 
     //PRE:
     //POST:
@@ -178,6 +151,9 @@ public class Tablero {
     //PRE:
     //POST:
     public Vec2D posJug() { return player.getPosicion(); }
+
+    //PRE:rand inicializado
+    //POST: genera un vector random dentro del tablero
     public Vec2D vectorRandom() { return new Vec2D(rand.nextInt(largoX),rand.nextInt(largoY)); }
     public Jugador getPlayer() { return player;}
 
@@ -201,5 +177,17 @@ public class Tablero {
     //POST: Devuelve las posiciones de los fuegos
     public ArrayList<Vec2D> getFuegos() {
         return fuegos;
+    }
+
+    //PRE:
+    //POST:
+    public static int getLargoX() {
+        return largoX;
+    }
+
+    //PRE:
+    //POST:
+    public static int getLargoY() {
+        return largoY;
     }
 }

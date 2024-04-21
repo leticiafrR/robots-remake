@@ -1,4 +1,4 @@
-package robot.Modelo;
+package robot.Modelo.Listeners;
 
 
 public interface ListenerGameOver {

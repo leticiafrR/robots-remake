@@ -7,19 +7,26 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import robot.Modelo.Acciones.AccionMovimiento;
 import robot.Modelo.Acciones.Action;
 import robot.Modelo.EstadoDeJuego;
-import robot.Modelo.ListenerGameOver;
-import robot.Modelo.ListenerTPSafe;
+import robot.Modelo.Listeners.ListenerLevelUp;
+import robot.Modelo.Listeners.ListenerTPSafe;
 
-import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Map;
 
 public class GameScene {
     private Scene principal;
     private Grilla grilla;
+
+    private EstadoDeJuego gameState;
+    private int filas;
+    private int columnas;
+
+    private VBox verticalRoot =new VBox();
+    private PanelPosterior pp;
+
+    private HBox horizontalBox;
 
 
     final Map<KeyCode, Action> controlsMove = Map.of(
@@ -32,7 +39,7 @@ public class GameScene {
             KeyCode.S, new AccionMovimiento(0,1),
             KeyCode.A, new AccionMovimiento(-1,0),
             KeyCode.D, new AccionMovimiento(1,0),
-            KeyCode.SPACE, new AccionMovimiento(0,0),
+            KeyCode.X, new AccionMovimiento(0,0),
             KeyCode.E, new AccionMovimiento(1,-1),
             KeyCode.Q, new AccionMovimiento(-1,-1),
             KeyCode.Z, new AccionMovimiento(-1,1),
@@ -40,36 +47,32 @@ public class GameScene {
 //            KeyCode.R, new AccionStartGame()
     );
 
-    private PanelPosterior pp;
+
     public GameScene(int columnas, int filas, EstadoDeJuego gameState){
-        VBox caja = new VBox();
+        this.gameState=gameState;
+        this.filas=filas;
+        this.columnas=columnas;
         grilla = new Grilla(columnas, filas,gameState);
-        pp = new PanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel());
-        //Stage gr= new Stage();
-        HBox panelPost = pp.crearHBox(gameState, grilla);
-        Stage conjunto= new Stage();
+        pp = new PanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
+        horizontalBox = pp.crearHBox(gameState, grilla);
         grilla.pintarGrilla(gameState);
-
-        GridPane tabla = grilla.getTablero();
-        VBox.setVgrow(tabla, Priority.ALWAYS);
-        VBox.setVgrow(panelPost, Priority.ALWAYS);
-        tabla.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE); //Revisar adaptacion
-        panelPost.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);//''       ''
-        tabla.setAlignment(Pos.CENTER);
-        tabla.setHgap(5);
-        tabla.setVgap(5);
-        caja.getChildren().add(tabla);
-        caja.getChildren().add(panelPost);
-        principal= new Scene(caja, (columnas*40), (filas*40)+75);
+        configurarTablero(grilla.getTablero());
+        principal= new Scene(verticalRoot, (columnas*40), (filas*40)+50);
         controladoMainScene(gameState);
-        ListenerTPSafe listenerTPSafe= new ListenerTPSafe() {
-            @Override
-            public void tpUsado(String cantidadTPsSafe) {
-                pp.actualizarBotonTPsafe(cantidadTPsSafe);
-            }
-        };
-        gameState.registrarListenerTPdisponibles(listenerTPSafe);
+        sendListeners();
+    }
 
+    private void configurarTablero(GridPane tablero){
+        VBox.setVgrow(tablero, Priority.ALWAYS);
+        VBox.setVgrow(horizontalBox, Priority.ALWAYS);
+        tablero.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE); //Revisar adaptacion
+        horizontalBox.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);//''       ''
+        tablero.setAlignment(Pos.CENTER);
+        verticalRoot.setAlignment(Pos.CENTER);
+        tablero.setHgap(5);
+        tablero.setVgap(5);
+        verticalRoot.getChildren().add(tablero);
+        verticalRoot.getChildren().add(horizontalBox);
     }
 
     public void controladoMainScene(EstadoDeJuego e){
@@ -80,8 +83,35 @@ public class GameScene {
                 grilla.pintarGrilla(e);
             }
         });
+
+    }
+    private void sendListeners(){
+        sendListenerTp();
+        sendListenerLevelUp();
+    }
+
+    private void sendListenerTp(){
+        ListenerTPSafe listenerTPSafe= new ListenerTPSafe() {
+            @Override
+            public void tpUsado(String cantidadTPsSafe) {
+                pp.actualizarContenido(cantidadTPsSafe,pp.getTpSafe());
+            }
+        };
+        gameState.registrarListenerTPdisponibles(listenerTPSafe);
+    }
+    private void sendListenerLevelUp(){
+        ListenerLevelUp listenerLevelUp =new ListenerLevelUp() {
+            @Override
+            public void levelUp(String nivelActualizado,String scoreActualizado,String tpSafeActualizado) {
+                pp.actualizarContenido(nivelActualizado,pp.getNivel());
+                pp.actualizarContenido(scoreActualizado,pp.getScore());
+                pp.actualizarContenido(tpSafeActualizado,pp.getTpSafe());
+            }
+        };
+        gameState.registrarListenerLevelUp(listenerLevelUp);
     }
     public Scene getPrincipal() {
         return principal;
     }
+
 }

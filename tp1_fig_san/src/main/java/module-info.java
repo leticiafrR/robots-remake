@@ -3,4 +3,5 @@ module robot {
     requires java.desktop;
     exports robot;
     exports robot.GUI;
+    exports robot.GUI.auxiliares;
 }

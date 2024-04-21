@@ -33,8 +33,6 @@ public class InitialScene{
         setFirstScene();
     }
 
-    //BOTON->GOTOMAINSCENE(X,Y)
-
     //PRE:
     //POST:
     //el valor predeterminado es 15 15

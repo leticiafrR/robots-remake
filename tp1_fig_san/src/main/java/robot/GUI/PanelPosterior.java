@@ -1,29 +1,30 @@
 package robot.GUI;
 
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.text.TextAlignment;
+import robot.GUI.auxiliares.CustomButton;
+import robot.GUI.auxiliares.CustomLabel;
+import robot.GUI.auxiliares.ObjetoConTexto;
 import robot.Modelo.Acciones.*;
 import robot.Modelo.*;
 
 public class PanelPosterior {
-    private Button tpRandom;
-    private Button tpSafe;
-    private Button esperar;
-    private Label score;//?????
-    private Label nivel;
+    private CustomButton tpRandom;
+    private CustomButton tpSafe;
+    private CustomButton esperar;
+    private CustomLabel score;//?????
+    private CustomLabel nivel;
 
 
-    public PanelPosterior(int cantTpSafes, int nivelActual){
-        tpRandom= new Button(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TLP_RANDOM));
-        tpSafe= new Button(contentFormatted(EstadoDeJuego.EtiquetasModelo.TP_SAFE, cantTpSafes));
-        esperar= new Button(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.ESPERAR));
-        score= new Label(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.SCORE));
-        nivel= new Label(contentFormatted(EstadoDeJuego.EtiquetasModelo.NIVEL,nivelActual));
 
+    public PanelPosterior(int cantTpSafes, int nivelActual,int scoreActual){
+        tpRandom= new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TLP_RANDOM));
+        tpSafe= new CustomButton(contentFormatted(EstadoDeJuego.EtiquetasModelo.TP_SAFE, cantTpSafes));
+        esperar= new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.ESPERAR));
+        score = new CustomLabel(contentFormatted(EstadoDeJuego.EtiquetasModelo.SCORE,scoreActual));
+        nivel= new CustomLabel(contentFormatted(EstadoDeJuego.EtiquetasModelo.NIVEL,nivelActual));
         configPredet(tpRandom);
         configPredet(tpSafe);
         configPredet(esperar);
@@ -36,21 +37,10 @@ public class PanelPosterior {
         return (EstadoDeJuego.getEtiqueta(etiqueta))+v;
     }
 
-    //PRE: boton n inicializado
-    //POST: le asigna la configuracion predeterminada para que se adapte al HBox
-    private void configPredet(Button n){
+    private void configPredet(ObjetoConTexto n){
         n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        n.setStyle("-fx-alignment: center;");
-
-        n.setTextAlignment(TextAlignment.CENTER);
-
-    }
-
-    //PRE: etiqueta n inicializado
-    //POST: le asigna la configuracion predeterminada para que se adapte al HBox
-    private void configPredet(Label n){
-        n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        n.setTextAlignment(TextAlignment.CENTER);
+        //n.setMaxWidth(Double.MAX_VALUE);
+        n.setTextAlignmentCustom(TextAlignment.CENTER);
     }
 
     //PRE: Estado de juego y grilla ya inicializados
@@ -77,7 +67,6 @@ public class PanelPosterior {
         tpRandom.setOnAction(actionEvent -> {
             AccionTeleportRandom accion = new AccionTeleportRandom();
             e.update(accion);
-
             grilla.pintarGrilla(e);
         });
         tpSafe.setOnAction(actionEvent -> {
@@ -93,47 +82,59 @@ public class PanelPosterior {
     public void actualizarBotonTPsafe(String contenido){
         tpSafe.setText(contenido);
     }
+    public void actualizarLabelNivel(String contenido){
+        nivel.setText(contenido);
+    }
+
+    public void actualizarScore(String contenido){
+        score.setText(contenido);
+    }
+
+    public void actualizarContenido(String contenido,ObjetoConTexto o){
+        o.setTexto(contenido);
+    }
+
     //TPSAFE-> CLICKGRILLA (VEC2D)-> ACCIONTPSAFE(X,Y)...
     //TPSAFE-> GRILLA.TPSAFE(TRUE)
 
     //CLICKENGRILLA (VEC2D)--- TRUE{ACCION(VEC2D) TPSAFE(FALSE)}SINO{ACCION(A
-    public Button getTpRandom() {
+    public CustomButton getTpRandom() {
         return tpRandom;
     }
 
-    public void setTpRandom(Button tpRandom) {
+    public void setTpRandom(CustomButton tpRandom) {
         this.tpRandom = tpRandom;
     }
 
-    public Button getTpSafe() {
+    public CustomButton getTpSafe() {
         return tpSafe;
     }
 
-    public void agotar(Button tpSafe) {
+    public void agotar(CustomButton tpSafe) {
         this.tpSafe = tpSafe;
     }
 
-    public Button getEsperar() {
+    public CustomButton getEsperar() {
         return esperar;
     }
 
-    public void setEsperar(Button esperar) {
+    public void setEsperar(CustomButton esperar) {
         this.esperar = esperar;
     }
 
-    public Label getScore() {
+    public CustomLabel getScore() {
         return score;
     }
 
-    public void setScore(Label score) {
+    public void setScore(CustomLabel score) {
         this.score = score;
     }
 
-    public Label getNivel() {
+    public CustomLabel getNivel() {
         return nivel;
     }
 
-    public void setNivel(Label nivel) {
+    public void setNivel(CustomLabel nivel) {
         this.nivel = nivel;
     }
 }
