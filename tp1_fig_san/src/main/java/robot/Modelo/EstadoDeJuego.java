@@ -93,9 +93,10 @@ public class EstadoDeJuego {
         actualizarEstadoJuego();
     }
 
+    //PRE: tablero inicializado
+    //POST: comprueba si la posicion que debe moverse esta fuera del tablero
     private boolean posicionFueraDelTablero(int x, int y){
-        return (x> tablero.getLargoX() || x< 0 ||y> tablero.getLargoY() ||y<0);
-
+        return (x>= tablero.getLargoX() || x< 0 ||y>= tablero.getLargoY() ||y<0);
     }
 
     //PRE:  tablero inicializado
