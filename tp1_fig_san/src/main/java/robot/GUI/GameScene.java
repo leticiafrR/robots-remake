@@ -30,6 +30,7 @@ public class GameScene {
         caja.getChildren().add(panelPost);
 
         principal= new Scene(caja, columnas+50, filas+150);
+        System.out.println("Sali de crear GameScene");
     }
 
     public Scene getPrincipal() {

@@ -56,6 +56,7 @@ public class Vista {
         };
         gameState.registrarListener(listener);
         actualizarPantalla(getmainScene(filas,columnas));
+        System.out.println("Sali de goToMainScene");
     }
 
     public Scene getmainScene(int filas, int columnas) {
@@ -64,8 +65,8 @@ public class Vista {
 
 
     public void actualizarPantalla(Scene escena){
-
         window.setScene(escena);
+        System.out.println("Cambio de escena");
     }
 
     private void setStage(){

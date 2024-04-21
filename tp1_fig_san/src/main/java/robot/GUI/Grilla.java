@@ -41,14 +41,16 @@ public class Grilla {
                 celda.setWidth(Double.MAX_VALUE);  // ''      ''  ''  ''    ''  ''     ''
                 GridPane.setVgrow(celda, Priority.ALWAYS);
                 GridPane.setHgrow(celda, Priority.ALWAYS);
-                tablero.add(celda,i,j);
+                //tablero.add(celda,i,j);
+                GridPane.setConstraints(celda,i,j);
+                tablero.getChildren().add(celda);
                 Vec2D pos = new Vec2D(i,j);
                 celda.setOnMouseClicked(event-> mover(pos,e));
             }
         }
     }
     private String idUnico(int i, int j){
-        return String.format("#%d%d",i,j);
+        return ("#"+i+"-"+j);
     }
 
     private void mover(Vec2D pos, EstadoDeJuego e){
@@ -91,8 +93,16 @@ public class Grilla {
             int x= (int) pint.getX();
             int y= (int) pint.getY();
             Image imagen= new Image(nombre);
-            ((Rectangle) tablero.lookup(idUnico(x,y))).setFill(new ImagePattern(imagen));
+            //((Rectangle) tablero.lookup(idUnico(x,y))).setFill(new ImagePattern(imagen));
+            for(Node r: tablero.getChildren()){
+                if( r.getId().equals(idUnico(x,y))){
+                    ((Rectangle) r).setFill(new ImagePattern(imagen));
+                    System.out.println("Pinté"+nombre);
+                    break;
+                }
+            }
         }
+        System.out.println("Sali de pintar");
     }
 
     public GridPane getTablero() {

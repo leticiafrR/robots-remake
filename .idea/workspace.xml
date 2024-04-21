@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="agregando escena inicial">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/imagen/fuego.png" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/resources/fuego.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/imagen/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/resources/player.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/imagen/robotx1.png" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/resources/robotx1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/imagen/robotx2.png" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/resources/robotx2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/Grilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/Grilla.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/Vista.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/Vista.class" afterDir="false" />
     </list>
     <list id="b22fe2d0-abc6-480d-8864-4b4e1c0ed5d9" name="Changes by Usuario" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +60,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
-    "Application.RobotApp.executor": "Debug",
+    "Application.RobotApp.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "pruebasVista",
@@ -219,31 +213,6 @@
     <MESSAGE value="ultimate changes from a grupal session" />
     <MESSAGE value="agregando escena inicial" />
     <option name="LAST_COMMIT_MESSAGE" value="agregando escena inicial" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java</url>
-          <line>49</line>
-          <properties class="robot.GUI.Grilla" method="idUnico">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
