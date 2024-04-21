@@ -13,6 +13,7 @@ public class AccionTeleport implements Action{
     //POST: realiza la jugada (Mueve al jugador hacia la posicion indicada)
     @Override
     public void aplicar(EstadoDeJuego e) {
-        e.realizarJugada(nuevaPosicion);
+        if (e.usarTpSafe()) { e.realizarJugada(nuevaPosicion);}
+
     }
 }

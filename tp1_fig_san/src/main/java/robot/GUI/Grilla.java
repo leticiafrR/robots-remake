@@ -72,10 +72,18 @@ public class Grilla {
             accion= new AccionMovimiento(dx,dy);
         }
         e.update(accion);
+
         pintarGrilla(e);
-        System.out.println(e.posicionesRobotsX1().size());
-        System.out.println(e.posicionesFuego());
     }
+    //CLICK BOTON --> ACTUALIZA TEXTO DEL BOTON
+    //            --> HABILITA A MOVERSE EN EL CLICK DE GRILLA... CLICK DE GRILLA--> ESTADO.UPDATE()[RESPECTIVA RESTA]
+
+    //gameScene CREA microfono -> estado de juego recibe microfono
+    //microfono ENVIA MENSAJE ->game scene
+    //game secen ENVIA MENSAJE  -> grilla
+    //                          ->  panel
+    //e
+
 
     //PRE:
     //POST: devuelve cuantas celdas debe moverse el jugador segun el numero entrante

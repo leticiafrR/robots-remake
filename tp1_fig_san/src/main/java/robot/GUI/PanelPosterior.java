@@ -15,13 +15,14 @@ public class PanelPosterior {
     private Button esperar;
     private Label score;//?????
     private Label nivel;
-    public PanelPosterior(){
 
+
+    public PanelPosterior(int cantTpSafes, int nivelActual){
         tpRandom= new Button(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TLP_RANDOM));
-        tpSafe= new Button(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TP_SAFE));
+        tpSafe= new Button(contentFormatted(EstadoDeJuego.EtiquetasModelo.TP_SAFE, cantTpSafes));
         esperar= new Button(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.ESPERAR));
         score= new Label(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.SCORE));
-        nivel= new Label(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.NIVEL));
+        nivel= new Label(contentFormatted(EstadoDeJuego.EtiquetasModelo.NIVEL,nivelActual));
 
         configPredet(tpRandom);
         configPredet(tpSafe);
@@ -30,11 +31,17 @@ public class PanelPosterior {
         configPredet(nivel);
     }
 
+    //para puntuación,nivel, tpsafe
+    private String contentFormatted(EstadoDeJuego.EtiquetasModelo etiqueta, int v){
+        return (EstadoDeJuego.getEtiqueta(etiqueta))+v;
+    }
 
     //PRE: boton n inicializado
     //POST: le asigna la configuracion predeterminada para que se adapte al HBox
     private void configPredet(Button n){
         n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+        n.setStyle("-fx-alignment: center;");
+
         n.setTextAlignment(TextAlignment.CENTER);
 
     }
@@ -70,6 +77,7 @@ public class PanelPosterior {
         tpRandom.setOnAction(actionEvent -> {
             AccionTeleportRandom accion = new AccionTeleportRandom();
             e.update(accion);
+
             grilla.pintarGrilla(e);
         });
         tpSafe.setOnAction(actionEvent -> {
@@ -82,6 +90,9 @@ public class PanelPosterior {
         });
     }
 
+    public void actualizarBotonTPsafe(String contenido){
+        tpSafe.setText(contenido);
+    }
     //TPSAFE-> CLICKGRILLA (VEC2D)-> ACCIONTPSAFE(X,Y)...
     //TPSAFE-> GRILLA.TPSAFE(TRUE)
 
@@ -98,7 +109,7 @@ public class PanelPosterior {
         return tpSafe;
     }
 
-    public void setTpSafe(Button tpSafe) {
+    public void agotar(Button tpSafe) {
         this.tpSafe = tpSafe;
     }
 

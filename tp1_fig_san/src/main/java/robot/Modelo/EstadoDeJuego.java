@@ -13,11 +13,12 @@ public class EstadoDeJuego {
     private int cantSafeTeleport;
     private int nivel;
 
-    private boolean jugable;
     private ListenerGameOver listenerGameOver;
+    private ListenerTPSafe listenerTPSafe;
+
 
     public  enum EtiquetasModelo{CANTIDAD_FIL,CANTIDAD_COL,NOMBRE,TP_SAFE,TLP_RANDOM,ESPERAR,SCORE,NIVEL,JUGAR};
-    private static final String[] etiquetas = new String[]{"Cantidad de filas:","Cantidad de columnas:","ROBOT", "Teleport Safe","Teleport Random","Esperar","Score: ","nivel: ","JUGAR!"};
+    private static final String[] etiquetas = new String[]{"Cantidad de filas:","Cantidad de columnas:","ROBOT", "Teleport Safe: ","Teleport Random","Esperar","Score: ","nivel: ","JUGAR!"};
 
     public static String getEtiqueta(EtiquetasModelo etiqueta) { return etiquetas[etiqueta.ordinal()];}
     //PRE:
@@ -39,7 +40,6 @@ public class EstadoDeJuego {
         cantSafeTeleport=1;
         nivel=1;
         tablero= new Tablero(largoX, largoY);
-        jugable= true;
         startGame();
     }
 
@@ -110,17 +110,27 @@ public class EstadoDeJuego {
         return tablero.getPosicionesRobot(RobotX2.class);
     }
 
-    //PRE:
-    //POST:
-    public boolean isJugable() {
-        return jugable;
-    }
+
 
     //PRE: listener inicializado
     //POST: le agrega el listener al estado de juego para saber cuando perdio
-    public void registrarListener(ListenerGameOver listener){
+    public void registrarListenerGameOver(ListenerGameOver listener){
         listenerGameOver = listener;
     }
+
+    public void registrarListenerTPdisponibles(ListenerTPSafe listener){
+        listenerTPSafe= listener;
+    }
+
+    public boolean usarTpSafe(){
+        if (cantSafeTeleport==0){
+            return false;
+        }
+        cantSafeTeleport--;
+        listenerTPSafe.tpUsado(getEtiqueta(EtiquetasModelo.TP_SAFE)+" "+cantSafeTeleport);
+        return true;
+    }
+
     public int getPuntuacion() {
         return puntuacion;
     }
@@ -144,5 +154,18 @@ public class EstadoDeJuego {
     }
     public void setNivel(int nivel) {
         this.nivel = nivel;
+    }
+
+
+    //falta terminar xd
+    private String[] modoDeJuego(){
+        return new String[]{ "para no perder ante los robots ten en cuenta:",
+                "- no dejes que te alcancen, los robots tratarán de seguir la posición en la que te encuentres, usa tu jugada evadirlos",
+                "- hay robots que avanzan de a dos celdas, no los confundas con los que avanzan de a una.",
+                "- logras que dos robots mueran si aquellos colisionan",
+                "- producto de la muerte de un robot hay celda incendiadas",
+                "- una celda incendiada mata a cualquier personaje que la pise (vos y cualquier robot)",
+                "- pasas de nivel cuando todos los robots muerieron",
+                "- inicialemente tienes 1 un teleport "};
     }
 }

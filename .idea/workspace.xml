@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="agregando escena inicial" />
-    <list id="35fba18e-d06f-49b6-9c81-f12c9af80aff" name="Changes by Usuario" comment="" />
+    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="agregando escena inicial">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" afterDir="false" />
+    </list>
+    <list id="35fba18e-d06f-49b6-9c81-f12c9af80aff" name="Changes by Usuario" comment="">
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -39,6 +50,26 @@
     &quot;accountId&quot;: &quot;11ceb746-25d6-403d-9232-db59ef0191e1&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java">
+      <ranges>
+        <range start1="15" end1="32" start2="15" end2="15" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="56" end1="57" start2="39" end2="40" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java">
+      <ranges>
+        <range start1="17" end1="18" start2="17" end2="17" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
+        <range start1="19" end1="21" start2="18" end2="22" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
+        <range start1="23" end1="24" start2="24" end2="25" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
+        <range start1="32" end1="32" start2="33" end2="37" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
+        <range start1="37" end1="37" start2="42" end2="44" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
+        <range start1="72" end1="72" start2="79" end2="80" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
+        <range start1="84" end1="84" start2="92" end2="95" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
+        <range start1="100" end1="101" start2="111" end2="112" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -51,27 +82,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.RobotApp.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "pruebasVista",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/aizen/Escritorio/Git/UBA/Paradigmas/TP1_ROBOTS_FIG-SAN/FIG-SAN_TP1_PARADIGMAS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "CodeWithMe",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RobotApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;pruebasVista&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/aizen/Escritorio/Git/UBA/Paradigmas/TP1_ROBOTS_FIG-SAN/FIG-SAN_TP1_PARADIGMAS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tp1_fig_san/src/main/resources" />
@@ -113,6 +144,13 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-4caba194b151-6fbd92ee" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -124,6 +162,7 @@
       <workItem from="1713319329078" duration="3298000" />
       <workItem from="1713405254046" duration="10183000" />
       <workItem from="1713496938127" duration="5681000" />
+      <workItem from="1713717157912" duration="8472000" />
     </task>
     <task id="LOCAL-00001" summary="update creador de robots">
       <option name="closed" value="true" />

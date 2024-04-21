@@ -13,23 +13,6 @@ import java.util.Map;
 
 public class Vista {
 
-    final Map<KeyCode, Action> controlsMove = Map.of(
-            KeyCode.LEFT, new AccionMovimiento(-1,0),
-            KeyCode.RIGHT, new AccionMovimiento(+1,0),
-            KeyCode.UP,new AccionMovimiento(0,1),
-            KeyCode.DOWN, new AccionMovimiento(0,-1),
-            KeyCode.ENTER, new AccionMovimiento(0,0)
-         /*   KeyCode.W, new AccionMovimiento(0,1),
-            KeyCode.S, new AccionMovimiento(0,-1),
-            KeyCode.A, new AccionMovimiento(-1,0),
-            KeyCode.D, new AccionMovimiento(1,0),
-            KeyCode.SPACE, new AccionMovimiento(0,0),
-            KeyCode.E, new AccionMovimiento(1,1),
-            KeyCode.Q, new AccionMovimiento(-1,1),
-            KeyCode.Z, new AccionMovimiento(-1,-1),
-            KeyCode.C, new AccionMovimiento(1,-1)*/
-//            KeyCode.R, new AccionStartGame()
-    );
     private Stage window;
     private Scene firstScene;
     private Scene mainScene;
@@ -54,7 +37,7 @@ public class Vista {
                 actualizarPantalla(preludio.getFirstScene());
             }
         };
-        gameState.registrarListener(listener);
+        gameState.registrarListenerGameOver(listener);
         actualizarPantalla(getmainScene(filas,columnas));
         System.out.println("Sali de goToMainScene");
     }
