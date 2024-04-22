@@ -1,6 +1,7 @@
 package robot.GUI;
 
 
+import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.text.TextAlignment;
@@ -31,17 +32,19 @@ public class PanelPosterior {
         configPredet(esperar);
         configPredet(score);
         configPredet(nivel);
+
     }
 
     //para puntuación,nivel, tpsafe
     private String contentFormatted(EstadoDeJuego.EtiquetasModelo etiqueta, int v){
-        return (EstadoDeJuego.getEtiqueta(etiqueta))+v;
+        return (EstadoDeJuego.getEtiqueta(etiqueta))+" "+v;
     }
 
     private void configPredet(ObjetoConTexto n){
         n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         //n.setMaxWidth(Double.MAX_VALUE);
         n.setTextAlignmentCustom(TextAlignment.CENTER);
+        n.setAlineamiento(Pos.CENTER);
     }
 
     //PRE: Estado de juego y grilla ya inicializados

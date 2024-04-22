@@ -1,6 +1,7 @@
 package robot.GUI.auxiliares;
 
 
+import javafx.geometry.Pos;
 import javafx.scene.text.TextAlignment;
 
 public class CustomLabel extends javafx.scene.control.Label implements ObjetoConTexto {
@@ -16,4 +17,5 @@ public class CustomLabel extends javafx.scene.control.Label implements ObjetoCon
     }
     public void setMaxSize(double width, double height){super.setMaxSize(width,height);}
     public void setTextAlignmentCustom(TextAlignment value){super.setTextAlignment(value);}
+    public void setAlineamiento(Pos pos) {super.setAlignment(pos);}
 }

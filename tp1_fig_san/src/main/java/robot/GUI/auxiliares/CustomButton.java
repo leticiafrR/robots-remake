@@ -1,5 +1,6 @@
 package robot.GUI.auxiliares;
 
+import javafx.geometry.Pos;
 import javafx.scene.text.TextAlignment;
 
 public class CustomButton extends javafx.scene.control.Button implements ObjetoConTexto{
@@ -18,4 +19,5 @@ public class CustomButton extends javafx.scene.control.Button implements ObjetoC
     public void setMaxSize(double width, double height){super.setMaxSize(width,height);}
 
     public void setTextAlignmentCustom(TextAlignment value){super.setTextAlignment(value);};
+    public void setAlineamiento(Pos pos){super.setAlignment(pos);}
 }
