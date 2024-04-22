@@ -24,7 +24,7 @@ public class Vista {
         actualizarPantallaPrincipal(firstScene);
         String nameGame=EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.NOMBRE);
         InfoWindow instruction = new InfoWindow(tittleEmergente[TittleEmergentes.INSTRUCTION.ordinal()],EstadoDeJuego.getInstruccionesModelo(), nameGame,window);
-        InfoWindow controles = new InfoWindow(tittleEmergente[TittleEmergentes.CONTROLS.ordinal()],EstadoDeJuego.getInstruccionesModelo(), nameGame,window);
+        InfoWindow controles = new InfoWindow(tittleEmergente[TittleEmergentes.CONTROLS.ordinal()],EstadoDeJuego.InstructionsControlGame(), nameGame,window);
         setStage();
     }
 

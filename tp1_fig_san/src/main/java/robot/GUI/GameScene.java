@@ -43,8 +43,9 @@ public class GameScene {
         this.gameState=gameState;
         this.filas=filas;
         this.columnas=columnas;
+        grilla = tableroVisualGrilla();
         crearPanelInferior();
-        crearTableroVisual();
+
         crearCajaContendoraMain();
         principal= new Scene(verticalRoot, (columnas*40), (filas*40)+50);
         controladoMainScene();
@@ -62,11 +63,12 @@ public class GameScene {
 
     //PRE:columnas y filas validas, gameState inicializado
     //POST: inicializa el tablero visual
-    private void crearTableroVisual(){
-        grilla = new Grilla(columnas, filas,gameState);
+    private Grilla tableroVisualGrilla(){
+        var grilla = new Grilla(columnas, filas,gameState);
         grilla.pintarGrilla(gameState);
         tablero= grilla.getTablero();
         configurarTablero();
+        return grilla;
     }
 
     //PRE: tablero inicializado

@@ -63,7 +63,7 @@ public class InfoWindow {
         var l = new Label(text);
         l.setBackground(Background.fill(Color.BLACK));
         l.setStyle("-fx-padding: 0 0 0 10;");
-        l.setFont(new Font("Times New Roman",12));
+        l.setFont(new Font("Times New Roman",16));
         l.setTextFill(Color.WHITE);
         return l;
     }
@@ -71,15 +71,15 @@ public class InfoWindow {
         Label lav = new Label(titulo);
         lav.setBackground(Background.fill(Color.BLACK));
         lav.setTextFill(Color.WHITE);
-        lav.setFont(new Font("Times New Roman",24));
+        lav.setFont(new Font("Times New Roman",28));
         //lav.setAlignment(Pos.CENTER);
         return lav;
     }
 
     private void setStage(){
         window.setTitle(stageName);
-        window.setHeight(320);
-        window.setWidth(400);
+        window.setHeight(360);
+        window.setWidth(500);
         window.setResizable(false);
 
         window.setX(500);//en qué parte de la pantalla se colocará la ventana (X)
