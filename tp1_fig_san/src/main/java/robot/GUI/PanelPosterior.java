@@ -1,6 +1,5 @@
 package robot.GUI;
 
-
 import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -15,7 +14,7 @@ public class PanelPosterior {
     private CustomButton tpRandom;
     private CustomButton tpSafe;
     private CustomButton esperar;
-    private CustomLabel score;//?????
+    private CustomLabel score;
     private CustomLabel nivel;
 
 
@@ -40,6 +39,8 @@ public class PanelPosterior {
         return (EstadoDeJuego.getEtiqueta(etiqueta))+" "+v;
     }
 
+    //PRE:  Objeto n ya inicializado
+    //POST: le asigna la configuracion predeterminada al objeto (Etiqueta o boton)
     private void configPredet(ObjetoConTexto n){
         n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         //n.setMaxWidth(Double.MAX_VALUE);
@@ -83,25 +84,9 @@ public class PanelPosterior {
         });
     }
 
-    public void actualizarBotonTPsafe(String contenido){
-        tpSafe.setText(contenido);
-    }
-    public void actualizarLabelNivel(String contenido){
-        nivel.setText(contenido);
-    }
-
-    public void actualizarScore(String contenido){
-        score.setText(contenido);
-    }
-
     public void actualizarContenido(String contenido,ObjetoConTexto o){
         o.setTexto(contenido);
     }
-
-    //TPSAFE-> CLICKGRILLA (VEC2D)-> ACCIONTPSAFE(X,Y)...
-    //TPSAFE-> GRILLA.TPSAFE(TRUE)
-
-    //CLICKENGRILLA (VEC2D)--- TRUE{ACCION(VEC2D) TPSAFE(FALSE)}SINO{ACCION(A
     public CustomButton getTpRandom() {
         return tpRandom;
     }

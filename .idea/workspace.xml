@@ -6,17 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="agregando escena inicial">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/PanelPosterior.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/PanelPosterior.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomLabel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/ObjetoConTexto.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/ObjetoConTexto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/Grilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/Grilla.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene.class" afterDir="false" />
     </list>
-    <list id="35fba18e-d06f-49b6-9c81-f12c9af80aff" name="Changes by Usuario" comment="">
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/auxiliares/CustomButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/auxiliares/CustomButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/auxiliares/CustomLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/auxiliares/CustomLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/auxiliares/ObjetoConTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/auxiliares/ObjetoConTexto.java" afterDir="false" />
+    <list id="12c0b3bb-abf0-4c63-8fcc-8ccf8aa21d8f" name="Changes by Usuario" comment="">
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,16 +51,6 @@
     &quot;accountId&quot;: &quot;11ceb746-25d6-403d-9232-db59ef0191e1&quot;
   }
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
-        <range start1="33" end1="33" start2="34" end2="35" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
-        <range start1="37" end1="38" start2="39" end2="40" changelist="35fba18e-d06f-49b6-9c81-f12c9af80aff" />
-        <range start1="44" end1="44" start2="46" end2="47" changelist="778ecfa1-14d0-4aa0-b250-89e1741eec68" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -153,7 +143,7 @@
       <workItem from="1713319329078" duration="3298000" />
       <workItem from="1713405254046" duration="10183000" />
       <workItem from="1713496938127" duration="5681000" />
-      <workItem from="1713717157912" duration="22764000" />
+      <workItem from="1713717157912" duration="27432000" />
     </task>
     <task id="LOCAL-00001" summary="update creador de robots">
       <option name="closed" value="true" />

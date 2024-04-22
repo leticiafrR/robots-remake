@@ -3,10 +3,7 @@ package robot.GUI;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import robot.Modelo.Acciones.AccionMovimiento;
 import robot.Modelo.Acciones.Action;
 import robot.Modelo.EstadoDeJuego;
@@ -18,7 +15,7 @@ import java.util.Map;
 public class GameScene {
     private Scene principal;
     private Grilla grilla;
-
+    private GridPane tablero;
     private EstadoDeJuego gameState;
     private int filas;
     private int columnas;
@@ -28,13 +25,8 @@ public class GameScene {
 
     private HBox horizontalBox;
 
-
+    //Controles de movimientos
     final Map<KeyCode, Action> controlsMove = Map.of(
-         /*   KeyCode.LEFT, new AccionMovimiento(-1,0),
-            KeyCode.RIGHT, new AccionMovimiento(+1,0),
-            KeyCode.UP,new AccionMovimiento(0,1),
-            KeyCode.DOWN, new AccionMovimiento(0,-1),*/
-            //KeyCode.ENTER, new AccionMovimiento(0,0),
             KeyCode.W, new AccionMovimiento(0,-1),
             KeyCode.S, new AccionMovimiento(0,1),
             KeyCode.A, new AccionMovimiento(-1,0),
@@ -44,7 +36,6 @@ public class GameScene {
             KeyCode.Q, new AccionMovimiento(-1,-1),
             KeyCode.Z, new AccionMovimiento(-1,1),
             KeyCode.C, new AccionMovimiento(1,1)
-//            KeyCode.R, new AccionStartGame()
     );
 
 
@@ -52,44 +43,71 @@ public class GameScene {
         this.gameState=gameState;
         this.filas=filas;
         this.columnas=columnas;
-        grilla = new Grilla(columnas, filas,gameState);
-        pp = new PanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
-        horizontalBox = pp.crearHBox(gameState, grilla);
-        grilla.pintarGrilla(gameState);
-        configurarTablero(grilla.getTablero());
+        crearPanelInferior();
+        crearTableroVisual();
+        crearCajaContendoraMain();
         principal= new Scene(verticalRoot, (columnas*40), (filas*40)+50);
-        controladoMainScene(gameState);
+        controladoMainScene();
         sendListeners();
     }
 
-    private void configurarTablero(GridPane tablero){
+    //PRE: gameState, grilla y horizontalBox inicalizadas
+    //POST: Crea el panel de botones del juego (panel inferior)
+    private void crearPanelInferior(){
+        pp = new PanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
+        horizontalBox = pp.crearHBox(gameState, grilla);
+        //VBox.setVgrow(horizontalBox, Priority.ALWAYS);
+        horizontalBox.setMaxSize(Double.MAX_VALUE, 75);
+    }
+
+    //PRE:columnas y filas validas, gameState inicializado
+    //POST: inicializa el tablero visual
+    private void crearTableroVisual(){
+        grilla = new Grilla(columnas, filas,gameState);
+        grilla.pintarGrilla(gameState);
+        tablero= grilla.getTablero();
+        configurarTablero();
+    }
+
+    //PRE: tablero inicializado
+    //POST: configura la adaptacion del tablero a la ventana del juego
+    private void configurarTablero(){
         VBox.setVgrow(tablero, Priority.ALWAYS);
-        VBox.setVgrow(horizontalBox, Priority.ALWAYS);
-        tablero.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE); //Revisar adaptacion
-        horizontalBox.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);//''       ''
+        tablero.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         tablero.setAlignment(Pos.CENTER);
-        verticalRoot.setAlignment(Pos.CENTER);
         tablero.setHgap(5);
         tablero.setVgap(5);
+    }
+
+    //PRE: tablero y panel inferior inicializados
+    //POST:Añade a la caja principal (VBox) el tablero y el panel inferior
+    private void crearCajaContendoraMain(){
+        verticalRoot.setAlignment(Pos.CENTER);
         verticalRoot.getChildren().add(tablero);
         verticalRoot.getChildren().add(horizontalBox);
     }
 
-    public void controladoMainScene(EstadoDeJuego e){
+    //PRE:Escena principal, controlsMove y gamestate inicializados
+    //POST: Añade comportamiento de movimiento por teclas
+    public void controladoMainScene(){
         principal.setOnKeyReleased(keyEvent -> {
             var accion= controlsMove.get(keyEvent.getCode());
             if (accion!=null) {
-                e.update(accion);
-                grilla.pintarGrilla(e);
+                gameState.update(accion);
+                grilla.pintarGrilla(gameState);
             }
         });
-
     }
+
+    //PRE:gameState y pp (panel posterior) inicializados
+    //POST:Envia listeners a los respectivos
     private void sendListeners(){
         sendListenerTp();
         sendListenerLevelUp();
     }
 
+    //PRE: pp y gameState inicializados
+    //POST: Le da comportamiento de actualizacion al contenido de TPSeguro
     private void sendListenerTp(){
         ListenerTPSafe listenerTPSafe= new ListenerTPSafe() {
             @Override
@@ -99,6 +117,9 @@ public class GameScene {
         };
         gameState.registrarListenerTPdisponibles(listenerTPSafe);
     }
+
+    //PRE: pp y gameState inicializados
+    //POST: Le da comportamiento de actualizacion al contenido del Panel inferior del juego
     private void sendListenerLevelUp(){
         ListenerLevelUp listenerLevelUp =new ListenerLevelUp() {
             @Override
@@ -110,6 +131,7 @@ public class GameScene {
         };
         gameState.registrarListenerLevelUp(listenerLevelUp);
     }
+
     public Scene getPrincipal() {
         return principal;
     }

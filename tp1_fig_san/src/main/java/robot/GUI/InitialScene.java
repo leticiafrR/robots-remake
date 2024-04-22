@@ -33,6 +33,7 @@ public class InitialScene{
         setFirstScene();
     }
 
+
     //PRE:
     //POST:
     //el valor predeterminado es 15 15
