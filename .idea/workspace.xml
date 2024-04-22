@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="agregando escena inicial">
+      <change afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InfoWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Grilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/GameScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/Grilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/Grilla.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InstructionBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InstructionBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/PanelPosterior.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/PanelPosterior.class" afterDir="false" />
     </list>
-    <list id="12c0b3bb-abf0-4c63-8fcc-8ccf8aa21d8f" name="Changes by Usuario" comment="">
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InitialScene.java" afterDir="false" />
-    </list>
+    <list id="12c0b3bb-abf0-4c63-8fcc-8ccf8aa21d8f" name="Changes by Usuario" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713624306916</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="agregando escena inicial">
+      <option name="closed" value="true" />
+      <created>1713756773323</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713756773323</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

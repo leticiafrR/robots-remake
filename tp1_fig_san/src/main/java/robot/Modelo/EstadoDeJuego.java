@@ -176,29 +176,25 @@ public class EstadoDeJuego {
 
 
     //falta terminar xd
-    private String[] modoDeJuego(){
-        return new String[]{ "para no perder ante los robots ten en cuenta:",
-                "- no dejes que te alcancen, los robots tratarán de seguir la posición en la que te encuentres, usa tu jugada evadirlos",
-                "- hay robots que avanzan de a dos celdas, no los confundas con los que avanzan de a una.",
-                "- logras que dos robots mueran si aquellos colisionan",
-                "- producto de la muerte de un robot hay celda incendiadas",
-                "- una celda incendiada mata a cualquier personaje que la pise (vos y cualquier robot)",
+    public static String[] getInstruccionesModelo(){
+        return new String[]{ "Para no perder ante los robots ten en cuenta:",
+                "- No dejes que te alcancen, los robots te persiguen.",
+                "- Hay robots que avanzan de a dos celdas, y robots que avanzan de a una.",
+                "- Lográs que dos robots mueran si colisionan.",
+                "- Producto de la muerte de un robot hay celdas incendiadas.",
+                "- Pisar una celda incendiada te mata vos y cualquier robot",
                 "- pasas de nivel cuando todos los robots muerieron",
                 "- inicialemente tienes 1 un teleport ",
-
-                "Controles del juego: ",
-                "-Click a la celda que te quieres mover (El personaje se mueve de a 1 celda)",
-
-                "Movimiento con teclado: ",
-                "-W: Arriba",
-                "-S: Abajo",
-                "-A: Izquierda",
-                "-D: Derecha",
-                "-E: Diagonal derecha superior",
-                "-Q: Diagonal izquierda superior",
-                "-C: Diagonal derecha inferior",
-                "-Z: Diagonal izquierda inferior",
-                "-X: Esperar",
         };
+    }
+    public static String[] InstructionsControlGame(){
+        return new String[]{"Para moverte puedes: ",
+                "- Clickear a donde querés ir (movimiento de a 1)",
+                "- W: Arriba,S: Abajo,A: Izquierda,D: Derecha",
+                "- E: Diagonal derecha superior",
+                "- Q: Diagonal izquierda superior",
+                "- C: Diagonal derecha inferior",
+                "- Z: Diagonal izquierda inferior",
+                "- X: Esperar"};
     }
 }

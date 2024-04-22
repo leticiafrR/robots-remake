@@ -12,6 +12,8 @@ public class Vista {
     private Scene mainScene;
     private InitialScene preludio;
     private EstadoDeJuego gameState;
+    private enum TittleEmergentes{INSTRUCTION,CONTROLS};
+    private final String[] tittleEmergente = new String[] {"Instrucciones de juego","Controles de juego"};
 
     private String nombreApp ="ROBOT";
 
@@ -19,7 +21,10 @@ public class Vista {
         window = stage;
         preludio = new InitialScene(this);
         firstScene = preludio.getFirstScene();
-        actualizarPantalla(firstScene);
+        actualizarPantallaPrincipal(firstScene);
+        String nameGame=EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.NOMBRE);
+        InfoWindow instruction = new InfoWindow(tittleEmergente[TittleEmergentes.INSTRUCTION.ordinal()],EstadoDeJuego.getInstruccionesModelo(), nameGame,window);
+        InfoWindow controles = new InfoWindow(tittleEmergente[TittleEmergentes.CONTROLS.ordinal()],EstadoDeJuego.getInstruccionesModelo(), nameGame,window);
         setStage();
     }
 
@@ -28,11 +33,11 @@ public class Vista {
         ListenerGameOver listener = new ListenerGameOver() {
             @Override
             public void gameOver() {
-                actualizarPantalla(preludio.getFirstScene());
+                actualizarPantallaPrincipal(preludio.getFirstScene());
             }
         };
         gameState.registrarListenerGameOver(listener);
-        actualizarPantalla(getmainScene(filas,columnas));
+        actualizarPantallaPrincipal(getmainScene(filas,columnas));
         System.out.println("Sali de goToMainScene");
     }
 
@@ -42,7 +47,7 @@ public class Vista {
     }
 
 
-    public void actualizarPantalla(Scene escena){
+    public void actualizarPantallaPrincipal(Scene escena){
         window.setScene(escena);
     }
 
