@@ -1,0 +1,123 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"778ecfa1-14d0-4aa0-b250-89e1741eec68\" name=\"Changes\" comment=\"adding ventanas emergentes: instrucciones y controles\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InfoWindow.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InfoWindow.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java\" afterDir=\"false\" />\r\n    </list>\r\n    <list id=\"12c0b3bb-abf0-4c63-8fcc-8ccf8aa21d8f\" name=\"Changes by Usuario\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;leticiafrR&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/AizenSanchez/FIG-SAN_TP1_PARADIGMAS.git&quot;,\r\n    &quot;accountId&quot;: &quot;11ceb746-25d6-403d-9232-db59ef0191e1&quot;\r\n  }\r\n}</component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 0\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fCyP4GvYLVOO6C09nV8jP1iMCe\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.App.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.RobotApp.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;pruebasVista&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;/home/aizen/Escritorio/Git/UBA/Paradigmas/TP1_ROBOTS_FIG-SAN/FIG-SAN_TP1_PARADIGMAS&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/tp1_fig_san/src/main/resources\" />\r\n      <recent name=\"$PROJECT_DIR$/tp1_fig_san/src/main/java\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"robot.GUI\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"Babashka\" factoryName=\"BabashkaLocalRepl\" activateToolWindowBeforeRun=\"false\">\r\n      <setting name=\"displayName\" value=\"\" />\r\n      <setting name=\"bbPath\" value=\"\" />\r\n      <setting name=\"parameters\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <setting name=\"workingDir\" value=\"\" />\r\n      <setting name=\"focusEditor\" value=\"false\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"ClojureREPL\" factoryName=\"Local\" activateToolWindowBeforeRun=\"false\">\r\n      <option name=\"configVersion\" value=\"1\" />\r\n      <option name=\"options\" />\r\n      <option name=\"profiles\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"ClojureREPL\" factoryName=\"Remote\" activateToolWindowBeforeRun=\"false\">\r\n      <setting name=\"displayName\" value=\"\" />\r\n      <setting name=\"host\" value=\"\" />\r\n      <setting name=\"port\" value=\"0\" />\r\n      <setting name=\"replType\" value=\"SOCKET\" />\r\n      <setting name=\"configType\" value=\"SPECIFY\" />\r\n      <setting name=\"replPortFileType\" value=\"STANDARD\" />\r\n      <setting name=\"customPortFile\" value=\"\" />\r\n      <setting name=\"fixLineNumbers\" value=\"false\" />\r\n      <setting name=\"focusEditor\" value=\"false\" />\r\n      <setting name=\"urlFile\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"778ecfa1-14d0-4aa0-b250-89e1741eec68\" name=\"Changes\" comment=\"\" />\r\n      <created>1713319327318</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1713319327318</updated>\r\n      <workItem from=\"1713319329078\" duration=\"3298000\" />\r\n      <workItem from=\"1713405254046\" duration=\"10183000\" />\r\n      <workItem from=\"1713496938127\" duration=\"5681000\" />\r\n      <workItem from=\"1713717157912\" duration=\"27432000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"update creador de robots\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713451538870</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713451538870</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"update starpoint\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713474068467</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713474068467</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"agregando reset y accion startGame\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713543449831</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713543449832</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"agregando escena inicial\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713624306916</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713624306916</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"agregando escena inicial\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713756773323</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713756773323</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"adding ventanas emergentes: instrucciones y controles\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1713776435483</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1713776435483</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.History.Properties\">\r\n    <option name=\"COLUMN_ID_ORDER\">\r\n      <list>\r\n        <option value=\"Default.Root\" />\r\n        <option value=\"Default.Author\" />\r\n        <option value=\"Default.Date\" />\r\n        <option value=\"Default.Subject\" />\r\n        <option value=\"Space.CommitStatus\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"pruebas\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n              <option name=\"SHOW_DETAILS_IN_CHANGES\" value=\"false\" />\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"update .idea\" />\r\n    <MESSAGE value=\"update creador de robots\" />\r\n    <MESSAGE value=\"update starpoint\" />\r\n    <MESSAGE value=\"ordenando file Tablero\" />\r\n    <MESSAGE value=\"agregando reset y accion startGame\" />\r\n    <MESSAGE value=\"ultimate changes from a grupal session\" />\r\n    <MESSAGE value=\"agregando escena inicial\" />\r\n    <MESSAGE value=\"adding ventanas emergentes: instrucciones y controles\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"adding ventanas emergentes: instrucciones y controles\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,11 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="adding ventanas emergentes: instrucciones y controles">
++    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="cambios estructurales congruentes al previo commit (grilla no inicializada)">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InfoWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/InfoWindow.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/Vista.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/PanelPosterior.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/PanelPosterior.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/EstadoDeJuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/EstadoDeJuego.class" afterDir="false" />
+     </list>
+     <list id="12c0b3bb-abf0-4c63-8fcc-8ccf8aa21d8f" name="Changes by Usuario" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+@@ -60,6 +61,7 @@
+   &quot;keyToString&quot;: {
+     &quot;Application.App.executor&quot;: &quot;Run&quot;,
+     &quot;Application.RobotApp.executor&quot;: &quot;Run&quot;,
++    &quot;Maven.tp1_fig_san [org.openjfx:javafx-maven-plugin:0.0.6:run].executor&quot;: &quot;Run&quot;,
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;pruebasVista&quot;,
+@@ -87,6 +89,19 @@
+     </key>
+   </component>
+   <component name="RunManager">
++    <configuration name="RobotApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="robot.GUI.RobotApp" />
++      <module name="tp1_fig_san" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="robot.GUI.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+       <setting name="displayName" value="" />
+       <setting name="bbPath" value="" />
+@@ -117,6 +132,11 @@
+       <setting name="urlFile" value="" />
+       <method v="2" />
+     </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.RobotApp" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -179,7 +199,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1713776435483</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="corrigiendo controles de juego, aumentando tamaño de letra, cambiando inconsistencia en el cumpliemnto de la precondicion para crear la grilla (recibia grilla sin inicializar)">
++      <option name="closed" value="true" />
++      <created>1713803836672</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1713803836672</updated>
++    </task>
++    <task id="LOCAL-00008" summary="cambios estructurales congruentes al previo commit (grilla no inicializada)">
++      <option name="closed" value="true" />
++      <created>1713803913242</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1713803913242</updated>
++    </task>
++    <option name="localTasksCounter" value="9" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -229,7 +265,9 @@
+     <MESSAGE value="ultimate changes from a grupal session" />
+     <MESSAGE value="agregando escena inicial" />
+     <MESSAGE value="adding ventanas emergentes: instrucciones y controles" />
+-    <option name="LAST_COMMIT_MESSAGE" value="adding ventanas emergentes: instrucciones y controles" />
++    <MESSAGE value="corrigiendo controles de juego, aumentando tamaño de letra, cambiando inconsistencia en el cumpliemnto de la precondicion para crear la grilla (recibia grilla sin inicializar)" />
++    <MESSAGE value="cambios estructurales congruentes al previo commit (grilla no inicializada)" />
++    <option name="LAST_COMMIT_MESSAGE" value="cambios estructurales congruentes al previo commit (grilla no inicializada)" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package robot.GUI;\r\n\r\nimport javafx.geometry.Pos;\r\nimport javafx.scene.layout.HBox;\r\nimport javafx.scene.layout.Priority;\r\nimport javafx.scene.text.TextAlignment;\r\nimport robot.GUI.auxiliares.CustomButton;\r\nimport robot.GUI.auxiliares.CustomLabel;\r\nimport robot.GUI.auxiliares.ObjetoConTexto;\r\nimport robot.Modelo.Acciones.*;\r\nimport robot.Modelo.*;\r\n\r\npublic class PanelPosterior {\r\n    private CustomButton tpRandom;\r\n    private CustomButton tpSafe;\r\n    private CustomButton esperar;\r\n    private CustomLabel score;\r\n    private CustomLabel nivel;\r\n\r\n\r\n\r\n    public PanelPosterior(int cantTpSafes, int nivelActual,int scoreActual){\r\n        tpRandom= new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TLP_RANDOM));\r\n        tpSafe= new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TP_SAFE)+\" \"+cantTpSafes);\r\n        //tpSafe= new CustomButton(contentFormatted(EstadoDeJuego.EtiquetasModelo.TP_SAFE, cantTpSafes));\r\n        esperar= new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.ESPERAR));\r\n        score = new CustomLabel(contentFormatted(EstadoDeJuego.EtiquetasModelo.SCORE,scoreActual));\r\n        nivel= new CustomLabel(contentFormatted(EstadoDeJuego.EtiquetasModelo.NIVEL,nivelActual));\r\n        configPredet(tpRandom);\r\n        configPredet(tpSafe);\r\n        configPredet(esperar);\r\n        configPredet(score);\r\n        configPredet(nivel);\r\n\r\n    }\r\n\r\n    //para puntuación,nivel, tpsafe\r\n    private String contentFormatted(EstadoDeJuego.EtiquetasModelo etiqueta, int v){\r\n        return (EstadoDeJuego.getEtiqueta(etiqueta))+\" \"+v;\r\n    }\r\n\r\n    //PRE:  Objeto n ya inicializado\r\n    //POST: le asigna la configuracion predeterminada al objeto (Etiqueta o boton)\r\n    private void configPredet(ObjetoConTexto n){\r\n        n.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);\r\n        //n.setMaxWidth(Double.MAX_VALUE);\r\n        n.setTextAlignmentCustom(TextAlignment.CENTER);\r\n        n.setAlineamiento(Pos.CENTER);\r\n    }\r\n\r\n    //PRE: Estado de juego y grilla ya inicializados\r\n    //POST: Devuelve el panel de botones ya configurado\r\n    public HBox crearHBox(EstadoDeJuego e, Grilla grilla){\r\n        HBox panelAbajo= new HBox();\r\n        HBox.setHgrow(tpRandom, Priority.ALWAYS);\r\n        HBox.setHgrow(tpSafe, Priority.ALWAYS);\r\n        HBox.setHgrow(esperar, Priority.ALWAYS);\r\n        HBox.setHgrow(score, Priority.ALWAYS);\r\n        HBox.setHgrow(nivel, Priority.ALWAYS);\r\n        panelAbajo.getChildren().add(tpRandom);\r\n        panelAbajo.getChildren().add(tpSafe);\r\n        panelAbajo.getChildren().add(esperar);\r\n        panelAbajo.getChildren().add(score);\r\n        panelAbajo.getChildren().add(nivel);\r\n        controladorPanelpos(e, grilla);\r\n        return panelAbajo;\r\n    }\r\n\r\n    //PRE: Estado de juego y grilla ya inicializados\r\n    //POST: Asigna comportamientos a los botones del panel\r\n    public void controladorPanelpos(EstadoDeJuego e, Grilla grilla){\r\n        tpRandom.setOnAction(actionEvent -> {\r\n            AccionTeleportRandom accion = new AccionTeleportRandom();\r\n            e.update(accion);\r\n            grilla.pintarGrilla(e);\r\n        });\r\n        tpSafe.setOnAction(actionEvent -> {\r\n            grilla.escucharTP();\r\n        });\r\n        esperar.setOnAction(actionEvent -> {\r\n            AccionMovimiento accion= new AccionMovimiento(0,0);\r\n            e.update(accion);\r\n            grilla.pintarGrilla(e);\r\n        });\r\n    }\r\n\r\n    public void actualizarContenido(String contenido,ObjetoConTexto o){\r\n        o.setTexto(contenido);\r\n    }\r\n    public CustomButton getTpRandom() {\r\n        return tpRandom;\r\n    }\r\n\r\n    public void setTpRandom(CustomButton tpRandom) {\r\n        this.tpRandom = tpRandom;\r\n    }\r\n\r\n    public CustomButton getTpSafe() {\r\n        return tpSafe;\r\n    }\r\n\r\n    public void agotar(CustomButton tpSafe) {\r\n        this.tpSafe = tpSafe;\r\n    }\r\n\r\n    public CustomButton getEsperar() {\r\n        return esperar;\r\n    }\r\n\r\n    public void setEsperar(CustomButton esperar) {\r\n        this.esperar = esperar;\r\n    }\r\n\r\n    public CustomLabel getScore() {\r\n        return score;\r\n    }\r\n\r\n    public void setScore(CustomLabel score) {\r\n        this.score = score;\r\n    }\r\n\r\n    public CustomLabel getNivel() {\r\n        return nivel;\r\n    }\r\n\r\n    public void setNivel(CustomLabel nivel) {\r\n        this.nivel = nivel;\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java b/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java
+--- a/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java	
++++ b/tp1_fig_san/src/main/java/robot/GUI/PanelPosterior.java	
+@@ -21,8 +21,7 @@
+ 
+     public PanelPosterior(int cantTpSafes, int nivelActual,int scoreActual){
+         tpRandom= new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TLP_RANDOM));
+-        tpSafe= new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TP_SAFE)+" "+cantTpSafes);
+-        //tpSafe= new CustomButton(contentFormatted(EstadoDeJuego.EtiquetasModelo.TP_SAFE, cantTpSafes));
++        tpSafe= new CustomButton(contentFormatted(EstadoDeJuego.EtiquetasModelo.TP_SAFE,cantTpSafes));
+         esperar= new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.ESPERAR));
+         score = new CustomLabel(contentFormatted(EstadoDeJuego.EtiquetasModelo.SCORE,scoreActual));
+         nivel= new CustomLabel(contentFormatted(EstadoDeJuego.EtiquetasModelo.NIVEL,nivelActual));
+diff --git a/tp1_fig_san/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst b/tp1_fig_san/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+new file mode 100644

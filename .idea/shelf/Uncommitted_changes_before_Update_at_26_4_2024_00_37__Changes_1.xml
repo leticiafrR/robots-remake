@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_26_4_2024_00_37_[Changes]1" date="1714102678996" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_4_2024_00_37_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 26/4/2024 00:37 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="tp1_fig_san/target/classes/robot/Modelo/EstadoDeJuego.class" />
+    <option name="AFTER_PATH" value="tp1_fig_san/target/classes/robot/Modelo/EstadoDeJuego.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_4_2024_00_37_[Changes]1/EstadoDeJuego.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="tp1_fig_san/target/classes/robot/GUI/PanelPosterior.class" />
+    <option name="AFTER_PATH" value="tp1_fig_san/target/classes/robot/GUI/PanelPosterior.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_4_2024_00_37_[Changes]1/PanelPosterior.class" />
+  </binary>
+</changelist>
