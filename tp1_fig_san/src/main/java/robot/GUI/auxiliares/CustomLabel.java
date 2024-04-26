@@ -18,4 +18,5 @@ public class CustomLabel extends javafx.scene.control.Label implements ObjetoCon
     public void setMaxSize(double width, double height){super.setMaxSize(width,height);}
     public void setTextAlignmentCustom(TextAlignment value){super.setTextAlignment(value);}
     public void setAlineamiento(Pos pos) {super.setAlignment(pos);}
+
 }

@@ -20,4 +20,5 @@ public class CustomButton extends javafx.scene.control.Button implements ObjetoC
 
     public void setTextAlignmentCustom(TextAlignment value){super.setTextAlignment(value);};
     public void setAlineamiento(Pos pos){super.setAlignment(pos);}
+
 }

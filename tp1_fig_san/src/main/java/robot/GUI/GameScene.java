@@ -14,14 +14,14 @@ import java.util.Map;
 
 public class GameScene {
     private Scene principal;
-    private Grilla grilla;
+    private AdminGrilla grilla;
     private GridPane tablero;
     private EstadoDeJuego gameState;
     private int filas;
     private int columnas;
 
     private VBox verticalRoot =new VBox();
-    private PanelPosterior pp;
+    private AdminPanelPosterior pp;
 
     private HBox horizontalBox;
 
@@ -55,7 +55,7 @@ public class GameScene {
     //PRE: gameState, grilla y horizontalBox inicalizadas
     //POST: Crea el panel de botones del juego (panel inferior)
     private void crearPanelInferior(){
-        pp = new PanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
+        pp = new AdminPanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
         horizontalBox = pp.crearHBox(gameState, grilla);
         //VBox.setVgrow(horizontalBox, Priority.ALWAYS);
         horizontalBox.setMaxSize(Double.MAX_VALUE, 75);
@@ -63,8 +63,8 @@ public class GameScene {
 
     //PRE:columnas y filas validas, gameState inicializado
     //POST: inicializa el tablero visual
-    private Grilla tableroVisualGrilla(){
-        var grilla = new Grilla(columnas, filas,gameState);
+    private AdminGrilla tableroVisualGrilla(){
+        var grilla = new AdminGrilla(columnas, filas,gameState);
         grilla.pintarGrilla(gameState);
         tablero= grilla.getTablero();
         configurarTablero();

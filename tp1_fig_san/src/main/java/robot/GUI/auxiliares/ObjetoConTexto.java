@@ -8,4 +8,6 @@ public interface ObjetoConTexto {
     void setMaxSize(double width, double height);
     void setTextAlignmentCustom(TextAlignment value);
     void setAlineamiento(Pos pos);
+
+
 }

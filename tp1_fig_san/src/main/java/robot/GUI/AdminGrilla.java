@@ -1,12 +1,10 @@
 package robot.GUI;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Rectangle;
 import robot.Modelo.Acciones.AccionMovimiento;
 import robot.Modelo.Acciones.AccionTeleport;
 import robot.Modelo.Acciones.Action;
@@ -16,7 +14,7 @@ import robot.Vec2D;
 import java.util.ArrayList;
 
 
-public class Grilla {
+public class AdminGrilla {
     private GridPane tablero = new GridPane();
     boolean escuchandoTP = false;
 
@@ -24,7 +22,7 @@ public class Grilla {
     private int largoY;
     public void escucharTP(){ escuchandoTP=true;}
 
-    public Grilla(int cantX, int cantY, EstadoDeJuego e){
+    public AdminGrilla(int cantX, int cantY, EstadoDeJuego e){
         largoX=cantX;
         largoY=cantY;
         setTable(e);
