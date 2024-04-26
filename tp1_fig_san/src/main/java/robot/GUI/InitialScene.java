@@ -36,7 +36,6 @@ public class InitialScene{
 
     //PRE:
     //POST:
-    //el valor predeterminado es 15 15
     private Button botonJugarConfigurated(Vista vista){
         var b = new Button(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.JUGAR));
         b.setPrefSize(150,50);

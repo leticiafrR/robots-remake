@@ -26,7 +26,8 @@ public class AdminPanelPosterior {
         nivel = new CustomLabel(contentFormatted(EstadoDeJuego.EtiquetasModelo.NIVEL,nivelActual));
         formatearTextos(new ObjetoConTexto[] {tpRandom,tpSafe,esperar,score,nivel});
     }
-
+    //PRE: nodes inicializado
+    //POST: crea y devuelve un Hbox que contiene los nodo recibidos
     private HBox crearHBox(Node[] nodes){
         HBox panelPosterior= new HBox();
         for (Node n: nodes){
@@ -36,22 +37,30 @@ public class AdminPanelPosterior {
         return panelPosterior;
     }
 
+    //PRE: objetosConTexto inicializados
+    //POST: da formato a todos los objetos con texto recibidos
     private void formatearTextos(ObjetoConTexto[] objetosConTexto){
         for (ObjetoConTexto o: objetosConTexto){
             o.formatear();
         }
     }
 
+    //PRE: etiqueta y variable (v) inicializadas
+    //POST: devuelve un string: contenido formateado segun la etiqueta del modelo y la variable
     private String contentFormatted(EstadoDeJuego.EtiquetasModelo etiqueta, int v){
         return (EstadoDeJuego.getEtiqueta(etiqueta))+" "+v;
     }
 
+    //PRE: los tres eventos inicializados
+    //POST: asigna a cada boton el comportamiento indicado
     public void asignarEventos(EventHandler<ActionEvent> eRandom,EventHandler<ActionEvent> eSafe,EventHandler<ActionEvent> eWait){
         tpRandom.setOnAction(eRandom);
         tpSafe.setOnAction(eSafe);
         esperar.setOnAction(eWait);
     }
 
+    //PRE: objetoConTexto y String inicializados
+    //POST: cambia el texto del objetoConTexto al nuevo contenido
     public void actualizarContenido(String contenido,ObjetoConTexto o){
         o.setTexto(contenido);
     }

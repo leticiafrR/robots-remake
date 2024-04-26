@@ -12,6 +12,7 @@ import robot.Modelo.EstadoDeJuego;
 /**
  * JavaFX App
  */
+
 public class RobotApp extends Application {
 
     @Override

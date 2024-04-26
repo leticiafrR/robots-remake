@@ -1,6 +1,7 @@
 package robot.GUI;
 
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import robot.Modelo.EstadoDeJuego;
 import robot.Modelo.Listeners.ListenerGameOver;
@@ -23,8 +24,8 @@ public class Vista {
         firstScene = preludio.getFirstScene();
         actualizarPantallaPrincipal(firstScene);
         String nameGame=EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.NOMBRE);
-        InfoWindow instruction = new InfoWindow(tittleEmergente[TittleEmergentes.INSTRUCTION.ordinal()],EstadoDeJuego.getInstruccionesModelo(), nameGame,window);
-        InfoWindow controles = new InfoWindow(tittleEmergente[TittleEmergentes.CONTROLS.ordinal()],EstadoDeJuego.InstructionsControlGame(), nameGame,window);
+        var instruction = new InfoWindow(tittleEmergente[TittleEmergentes.INSTRUCTION.ordinal()],EstadoDeJuego.getInstruccionesModelo(), nameGame,window);
+        var controles = new InfoWindow(tittleEmergente[TittleEmergentes.CONTROLS.ordinal()],EstadoDeJuego.InstructionsControlGame(), nameGame,window);
         setStage();
     }
 
@@ -38,7 +39,6 @@ public class Vista {
         };
         gameState.registrarListenerGameOver(listener);
         actualizarPantallaPrincipal(getmainScene(filas,columnas));
-        System.out.println("Sali de goToMainScene");
     }
 
     public Scene getmainScene(int filas, int columnas) {
@@ -53,13 +53,8 @@ public class Vista {
 
     private void setStage(){
         window.setTitle(nombreApp);
-        /*
-        Image icon = new Image("icon.png");
+        Image icon = new Image("logo.png");
         window.getIcons().add(icon);
-        window.setHeight(600);
-        window.setWidth(600);
-         */
-        //window.setResizable(false);
         window.setX(500);
         window.setY(50);
        // actualizarPantalla(firstScene);

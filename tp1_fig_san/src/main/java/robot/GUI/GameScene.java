@@ -13,21 +13,22 @@ import robot.Modelo.EstadoDeJuego;
 import robot.Modelo.Listeners.ListenerLevelUp;
 import robot.Modelo.Listeners.ListenerTPSafe;
 
-import java.util.ArrayList;
+
 import java.util.Map;
 
 public class GameScene {
-    private Scene principal;
-    private AdminGrilla grilla;
-    private GridPane tablero;
     private EstadoDeJuego gameState;
+    private Scene principal;
+    private AdminGrilla adminGrilla;
+    private GridPane grilla;
+    private AdminPanelPosterior adminPanelPost;
+    private HBox panelPost;
     private int filas;
     private int columnas;
+    private VBox verticalRoot = new VBox();
 
-    private VBox verticalRoot =new VBox();
-    private AdminPanelPosterior pp;
 
-    private HBox horizontalBox;
+
 
     //Controles de movimientos
     final Map<KeyCode, Action> controlsMove = Map.of(
@@ -47,121 +48,92 @@ public class GameScene {
         this.gameState=gameState;
         this.filas=filas;
         this.columnas=columnas;
-        grilla = tableroVisualGrilla();
+        crearGrilla();
         crearPanelInferior();
-
         crearCajaContendoraMain();
         principal= new Scene(verticalRoot, (columnas*40), (filas*40)+50);
-        controladoMainScene();
+        controladorMainScene();
         sendListeners();
     }
 
-    //PRE: gameState, grilla y horizontalBox inicalizadas
-    //POST: Crea el panel de botones del juego (panel inferior)
+    //PRE: gameState inicalizado
+    //POST: inicializa al administrador del panelPosterior e instancia al panelPosterior de botones (lo configura)
     private void crearPanelInferior(){
-        pp = new AdminPanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
-        horizontalBox = pp.getHb();
-        pp.asignarEventos(eventoTpRandom(),eventoTpSafe(),eventoEsperar());
-        horizontalBox.setMaxSize(Double.MAX_VALUE, 75);
+        adminPanelPost = new AdminPanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
+        panelPost = adminPanelPost.getHb();
+        adminPanelPost.asignarEventos(eventoTpRandom(),eventoTpSafe(),eventoEsperar());
+        panelPost.setMaxSize(Double.MAX_VALUE, 60);
+        panelPost.setMinHeight(60);
     }
 
-    private EventHandler<ActionEvent> eventoTpRandom(){
-        return new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                AccionTeleportRandom accion = new AccionTeleportRandom();
-                gameState.update(accion);
-                grilla.pintarGrilla(gameState);
-            }
-        };
-    }
-    private EventHandler<ActionEvent> eventoTpSafe(){
-        return new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                grilla.escucharTP();
-            }
-        };
-    }
-    private EventHandler<ActionEvent> eventoEsperar(){
-        return new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                AccionMovimiento accion= new AccionMovimiento(0,0);
-                gameState.update(accion);
-                grilla.pintarGrilla(gameState);
-            }
-        };
-    }
-
-    //PRE:columnas y filas validas, gameState inicializado
-    //POST: inicializa el tablero visual
-    private AdminGrilla tableroVisualGrilla(){
-        var grilla = new AdminGrilla(columnas, filas,gameState);
-        grilla.pintarGrilla(gameState);
-        tablero= grilla.getTablero();
+    //PRE: gameState inicializado
+    //POST: inicializa al administrador dela grilla y a la misma grilla del juego
+    private void crearGrilla(){
+        adminGrilla = new AdminGrilla(columnas, filas,gameState);
+        adminGrilla.pintarGrilla(gameState);
+        grilla = adminGrilla.getGrilla();
         configurarTablero();
-        return grilla;
     }
 
-    //PRE: tablero inicializado
+    //PRE: grilla inicializada
     //POST: configura la adaptacion del tablero a la ventana del juego
     private void configurarTablero(){
-        VBox.setVgrow(tablero, Priority.ALWAYS);
-        tablero.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        tablero.setAlignment(Pos.CENTER);
-        tablero.setHgap(5);
-        tablero.setVgap(5);
+        VBox.setVgrow(grilla, Priority.ALWAYS);
+        grilla.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+        grilla.setAlignment(Pos.CENTER);
+        grilla.setHgap(5);
+        grilla.setVgap(5);
     }
 
-    //PRE: tablero y panel inferior inicializados
-    //POST:Añade a la caja principal (VBox) el tablero y el panel inferior
+    //PRE: grilla y panelPosterior inicializados
+    //POST: iniciliza el gestor de layout principal y agrega los nodos respectivos (grilla y panelPosterior)
     private void crearCajaContendoraMain(){
+        verticalRoot = new VBox();
         verticalRoot.setAlignment(Pos.CENTER);
-        verticalRoot.getChildren().add(tablero);
-        verticalRoot.getChildren().add(horizontalBox);
+        verticalRoot.getChildren().add(grilla);
+        verticalRoot.getChildren().add(panelPost);
     }
 
     //PRE:Escena principal, controlsMove y gamestate inicializados
     //POST: Añade comportamiento de movimiento por teclas
-    public void controladoMainScene(){
+    public void controladorMainScene(){
         principal.setOnKeyReleased(keyEvent -> {
             var accion= controlsMove.get(keyEvent.getCode());
             if (accion!=null) {
                 gameState.update(accion);
-                grilla.pintarGrilla(gameState);
+                adminGrilla.pintarGrilla(gameState);
             }
         });
     }
 
-    //PRE:gameState y pp (panel posterior) inicializados
-    //POST:Envia listeners a los respectivos
+    //PRE:
+    //POST: envia listener al modelo
     private void sendListeners(){
         sendListenerTp();
         sendListenerLevelUp();
     }
 
-    //PRE: pp y gameState inicializados
-    //POST: Le da comportamiento de actualizacion al contenido de TPSeguro
+    //PRE: adminPanelPosterior y gameState inicializados
+    //POST: crea y envia listener ante el evento teleport seguro al modelo
     private void sendListenerTp(){
         ListenerTPSafe listenerTPSafe= new ListenerTPSafe() {
             @Override
             public void tpUsado(String cantidadTPsSafe) {
-                pp.actualizarContenido(cantidadTPsSafe,pp.getTpSafe());
+                adminPanelPost.actualizarContenido(cantidadTPsSafe, adminPanelPost.getTpSafe());
             }
         };
         gameState.registrarListenerTPdisponibles(listenerTPSafe);
     }
 
-    //PRE: pp y gameState inicializados
-    //POST: Le da comportamiento de actualizacion al contenido del Panel inferior del juego
+    //PRE: adminPanelPosterior y gameState inicializados
+    //POST: crea y envia listener ante el evento level up al modelo
     private void sendListenerLevelUp(){
         ListenerLevelUp listenerLevelUp =new ListenerLevelUp() {
             @Override
             public void levelUp(String nivelActualizado,String scoreActualizado,String tpSafeActualizado) {
-                pp.actualizarContenido(nivelActualizado,pp.getNivel());
-                pp.actualizarContenido(scoreActualizado,pp.getScore());
-                pp.actualizarContenido(tpSafeActualizado,pp.getTpSafe());
+                adminPanelPost.actualizarContenido(nivelActualizado, adminPanelPost.getNivel());
+                adminPanelPost.actualizarContenido(scoreActualizado, adminPanelPost.getScore());
+                adminPanelPost.actualizarContenido(tpSafeActualizado, adminPanelPost.getTpSafe());
             }
         };
         gameState.registrarListenerLevelUp(listenerLevelUp);
@@ -169,6 +141,43 @@ public class GameScene {
 
     public Scene getPrincipal() {
         return principal;
+    }
+
+    //PRE: gameState y adminGrilla inicializados
+    //POST: devuelve evento ante un teleport random
+    private EventHandler<ActionEvent> eventoTpRandom(){
+        return new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                AccionTeleportRandom accion = new AccionTeleportRandom();
+                gameState.update(accion);
+                adminGrilla.pintarGrilla(gameState);
+            }
+        };
+    }
+
+    //PRE: gameState y adminGrilla inicializados
+    //POST: devuelve evento ante un "esperar" del jugador
+    private EventHandler<ActionEvent> eventoEsperar(){
+        return new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                AccionMovimiento accion= new AccionMovimiento(0,0);
+                gameState.update(accion);
+                adminGrilla.pintarGrilla(gameState);
+            }
+        };
+    }
+
+    //PRE: adminGrilla inicializado
+    //POST: devuelve un evento ante un "teleport safe" del jugador
+    private EventHandler<ActionEvent> eventoTpSafe(){
+        return new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                adminGrilla.escucharTp();
+            }
+        };
     }
 
 }
