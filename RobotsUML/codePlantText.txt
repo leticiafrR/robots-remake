@@ -1,1 +1,115 @@
-@startumltitle ROBOTclass Vec2D{- Int x- Int y}abstract Personaje{- Vec2D posicion+ moverse(Vec2D posicion)}class Jugadorclass Robot{+ perseguirPosicion(Vec2D)}Personaje <|.. JugadorPersonaje <|.. RobotPersonaje<|.. Fuegoclass RobotX2class RobotX1Robot <|-- RobotX1Robot <|-- RobotX2class Tablero{- Int long- Int wide- Jugador player- List<Robot> robots- HashSet<Fuego> fuegos+ starPoint(Int nivel)+ colisionRobots():Boolean+ perseguirJugador():Boolean+ moverPersonaje(Personaje)+ Boolean win()+ Boolean lose()}Tablero..>Vec2DTablero*-->RobotTablero*-->JugadorTablero-->GameStateclass GameState{- Int puntuation- Tablero tabble- Int cantSafeTeleport- Int nivel+ actualizarEstadoJuego()+ starGame()+ gameOver()+ nextLevel()- posicionarEscena()+ realizarJugada()}note left of GameState::starGamellama a starPointend noteinterface Action{aplicar(GameState)}class AccionTeleport{- Vec2D newPosition}class AccionMovimiento{- Vec2D direction}AccionTeleportRandom..|> ActionAccionStartLevel..|> ActionAccionTeleport..|>ActionAccionMovimiento..|>Actionnote left of AccionStartLevelpresiona startGameend notenote left of AccionTeleportnecesita una posicion para su constriucciónend notenote left of Tablero::starPointposiciones aleatoriasend note@enduml
+@startuml
+
+title ROBOT
+
+
+
+abstract Personaje{
+- Vec2D posicion
++ moverse(Vec2D posicion)
+}
+
+
+class Jugador
+
+class Robot{
++ perseguirPosicion(Vec2D)
+}
+
+Personaje <|-- Jugador
+Personaje <|-- Robot
+
+
+class RobotX2
+class RobotX1
+
+Robot <|-- RobotX1
+Robot <|-- RobotX2
+
+
+class Tablero{
+- Int largoX
+- Int largoY
+- Jugador player
+- List<Robot> robots
+- List<Vec2D> fuegos
+
+- crearRobots(Int,Int)
+- colisionarRobots()
+- incendiarRobots(Robot)
+- matarRobots(Robot,Robot): Boolean
++ starPoint(Int nivel)
++ moverJugador(Vec2D)
++ posJug(): Vec2D
++ vectorRandom(): Vec2D
++ perseguirJugador()
++ win(): Boolean
++ lose(): Boolean
+
+}
+
+Tablero*-->Robot
+Tablero*-->Jugador
+
+EstadoDeJuego *--> Tablero
+
+class EstadoDeJuego{
+- Int score
+- Tablero tablero
+- Int cantSafeTeleport
+- Int nivel
++ actualizarEstadoJuego()
++ startGame()
++ reset(Int, Int)
++ gameOver()
++ nextLevel()
++ realizarJugada(Vec2D)
++ update(Accion)
++ usarTpSafe()
+}
+
+EstadoDeJuego-->ListenerGameOver
+EstadoDeJuego-->ListenerLevelUp
+EstadoDeJuego-->ListenerTPSafe
+EstadoDeJuego..>Action
+
+interface ListenerGameOver{
++ gameOver()
+}
+
+interface ListenerLevelUp{
++ levelUp(String, String, String)
+}
+
+interface ListenerTPSafe{
++ tpUsado(String)
+}
+
+interface Action{
+aplicar(GameState)
+}
+
+
+class AccionTeleport{
+- Vec2D newPosition
+
+}
+class AccionMovimiento{
+- Vec2D direction
+}
+
+class AccionStartGame{
+- Int tamX
+- Int tamY
+}
+
+class AccionTeleportRandom{
+}
+
+Action <|..AccionStartGame
+Action<|.. AccionTeleportRandom
+Action<|..AccionTeleport
+Action<|..AccionMovimiento
+
+
+@enduml
