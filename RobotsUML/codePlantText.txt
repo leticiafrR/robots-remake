@@ -1,14 +1,7 @@
 @startuml
 
 title ROBOT
-class Vec2D{
-- Int x
-- Int y
-+ equals(Vec2D): Boolean
-+ estaContenido(List<Vec2D>): Boolean
-+ sumarCon(): Vec2D
-+ restarCon(): Vec2D
-}
+
 
 
 abstract Personaje{
@@ -16,14 +9,15 @@ abstract Personaje{
 + moverse(Vec2D posicion)
 }
 
+
 class Jugador
 
 class Robot{
 + perseguirPosicion(Vec2D)
 }
 
-Personaje <|.. Jugador
-Personaje <|.. Robot
+Personaje <|-- Jugador
+Personaje <|-- Robot
 
 
 class RobotX2
@@ -39,11 +33,8 @@ class Tablero{
 - Jugador player
 - List<Robot> robots
 - List<Vec2D> fuegos
-- Int cantRobotX1min
-- Int cantRobotX2min
 
 - crearRobots(Int,Int)
-- posDesocupada(List<Vec2D>):Vec2D
 - colisionarRobots()
 - incendiarRobots(Robot)
 - matarRobots(Robot,Robot): Boolean
@@ -52,47 +43,47 @@ class Tablero{
 + posJug(): Vec2D
 + vectorRandom(): Vec2D
 + perseguirJugador()
-+ Boolean win()
-+ Boolean lose()
++ win(): Boolean
++ lose(): Boolean
 
 }
 
-
-Tablero..>Vec2D
 Tablero*-->Robot
 Tablero*-->Jugador
-Tablero<--* GameState
 
-class GameState{
-- Int puntuation
-- Tablero tabble
+EstadoDeJuego *--> Tablero
+
+class EstadoDeJuego{
+- Int score
+- Tablero tablero
 - Int cantSafeTeleport
 - Int nivel
 + actualizarEstadoJuego()
-+ starLevel()
++ startGame()
++ reset(Int, Int)
 + gameOver()
 + nextLevel()
-- posicionarEscena()
-+ realizarJugada()
++ realizarJugada(Vec2D)
 + update(Accion)
-+ getMainPosition():Vec2D
++ usarTpSafe()
 }
 
+EstadoDeJuego-->ListenerGameOver
+EstadoDeJuego-->ListenerLevelUp
+EstadoDeJuego-->ListenerTPSafe
+EstadoDeJuego..>Action
 
-note right of GameState::starLevel
-llama a starPoint
-end note
-note right of GameState::actualizarEstadoJuego
-calcula nivel (usa tablero)
-end note 
-note left of Tablero::win
-se llama constantemente
-end note
-note right of GameState::nivel 
-inicia en uno
-end note 
+interface ListenerGameOver{
++ gameOver()
+}
 
+interface ListenerLevelUp{
++ levelUp(String, String, String)
+}
 
+interface ListenerTPSafe{
++ tpUsado(String)
+}
 
 interface Action{
 aplicar(GameState)
@@ -107,17 +98,18 @@ class AccionMovimiento{
 - Vec2D direction
 }
 
-AccionTeleportRandom..|> Action
-AccionTeleport..|>Action
-AccionMovimiento..|>Action
+class AccionStartGame{
+- Int tamX
+- Int tamY
+}
 
+class AccionTeleportRandom{
+}
 
-note left of AccionTeleport
-necesita una posicion para su constriucci�n
-end note
+Action <|..AccionStartGame
+Action<|.. AccionTeleportRandom
+Action<|..AccionTeleport
+Action<|..AccionMovimiento
 
-note left of Tablero::starPoint
-posiciones aleatorias
-end note
 
 @enduml
