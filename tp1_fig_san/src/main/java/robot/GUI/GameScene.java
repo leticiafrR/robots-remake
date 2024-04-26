@@ -1,15 +1,19 @@
 package robot.GUI;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import robot.Modelo.Acciones.AccionMovimiento;
+import robot.Modelo.Acciones.AccionTeleportRandom;
 import robot.Modelo.Acciones.Action;
 import robot.Modelo.EstadoDeJuego;
 import robot.Modelo.Listeners.ListenerLevelUp;
 import robot.Modelo.Listeners.ListenerTPSafe;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class GameScene {
@@ -56,9 +60,38 @@ public class GameScene {
     //POST: Crea el panel de botones del juego (panel inferior)
     private void crearPanelInferior(){
         pp = new AdminPanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
-        horizontalBox = pp.crearHBox(gameState, grilla);
-        //VBox.setVgrow(horizontalBox, Priority.ALWAYS);
+        horizontalBox = pp.getHb();
+        pp.asignarEventos(eventoTpRandom(),eventoTpSafe(),eventoEsperar());
         horizontalBox.setMaxSize(Double.MAX_VALUE, 75);
+    }
+
+    private EventHandler<ActionEvent> eventoTpRandom(){
+        return new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                AccionTeleportRandom accion = new AccionTeleportRandom();
+                gameState.update(accion);
+                grilla.pintarGrilla(gameState);
+            }
+        };
+    }
+    private EventHandler<ActionEvent> eventoTpSafe(){
+        return new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                grilla.escucharTP();
+            }
+        };
+    }
+    private EventHandler<ActionEvent> eventoEsperar(){
+        return new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                AccionMovimiento accion= new AccionMovimiento(0,0);
+                gameState.update(accion);
+                grilla.pintarGrilla(gameState);
+            }
+        };
     }
 
     //PRE:columnas y filas validas, gameState inicializado

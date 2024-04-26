@@ -41,7 +41,7 @@ public class EstadoDeJuego {
     //POST: Inicializa atributos de Estado de Juego
     public void reset(int largoX, int largoY){
         score =0;
-        cantSafeTeleport=1;
+        cantSafeTeleport=50;
         nivel=1;
         tablero= new Tablero(largoX, largoY);
         startGame();
