@@ -7,8 +7,6 @@ import robot.Modelo.Listeners.ListenerTPSafe;
 import robot.Modelo.Personajes.RobotX1;
 import robot.Modelo.Personajes.RobotX2;
 import robot.Vec2D;
-
-import java.awt.*;
 import java.util.ArrayList;
 
 public class EstadoDeJuego {

@@ -4,8 +4,6 @@ import robot.Modelo.Personajes.*;
 import robot.Vec2D;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.Random;
 
 public class Tablero {

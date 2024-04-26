@@ -14,6 +14,5 @@ public class AccionTeleport implements Action{
     @Override
     public void aplicar(EstadoDeJuego e) {
         if (e.usarTpSafe()) { e.realizarJugada(nuevaPosicion);}
-
     }
 }
