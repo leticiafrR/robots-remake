@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="agregando ventanas de level up y game over">
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/RobotApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/RobotApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene$TypeSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene$TypeSize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomLabel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/EstadoDeJuego$EtiquetasModelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/EstadoDeJuego$EtiquetasModelo.class" afterDir="false" />
+    </list>
+    <list id="4c235433-9455-402e-981b-e1f2aa30eb86" name="Changes by aizen" comment="" />
+    <list id="12c0b3bb-abf0-4c63-8fcc-8ccf8aa21d8f" name="Changes by Usuario" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;leticiafrR&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AizenSanchez/FIG-SAN_TP1_PARADIGMAS.git&quot;,
+    &quot;accountId&quot;: &quot;11ceb746-25d6-403d-9232-db59ef0191e1&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2fCyP4GvYLVOO6C09nV8jP1iMCe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.RobotApp.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "pruebasVista",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/aizen/Escritorio/Git/UBA/Paradigmas/TP1_ROBOTS_FIG-SAN/FIG-SAN_TP1_PARADIGMAS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuario\IdeaProjects\FIG-SAN_TP1_PARADIGMAS\tp1_fig_san\src\main\resources" />
+      <recent name="$PROJECT_DIR$/tp1_fig_san/src/main/resources" />
+      <recent name="$PROJECT_DIR$/tp1_fig_san/src/main/java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="robot.GUI" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="bbPath" value="" />
+      <setting name="parameters" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <setting name="workingDir" value="" />
+      <setting name="focusEditor" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <option name="configVersion" value="1" />
+      <option name="options" />
+      <option name="profiles" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <setting name="focusEditor" value="false" />
+      <setting name="urlFile" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="" />
+      <created>1713319327318</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713319327318</updated>
+      <workItem from="1713319329078" duration="3298000" />
+      <workItem from="1713405254046" duration="10183000" />
+      <workItem from="1713496938127" duration="5681000" />
+      <workItem from="1713717157912" duration="27618000" />
+      <workItem from="1714097364314" duration="2999000" />
+    </task>
+    <task id="LOCAL-00001" summary="update creador de robots">
+      <option name="closed" value="true" />
+      <created>1713451538870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713451538870</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update starpoint">
+      <option name="closed" value="true" />
+      <created>1713474068467</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713474068467</updated>
+    </task>
+    <task id="LOCAL-00003" summary="agregando reset y accion startGame">
+      <option name="closed" value="true" />
+      <created>1713543449831</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713543449832</updated>
+    </task>
+    <task id="LOCAL-00004" summary="agregando escena inicial">
+      <option name="closed" value="true" />
+      <created>1713624306916</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713624306916</updated>
+    </task>
+    <task id="LOCAL-00005" summary="reorganizando administrador de panel posterior, modularizando y quitando sintactic sugar de eventos: ahora se reciben los eventos">
+      <option name="closed" value="true" />
+      <created>1714111291721</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714111291721</updated>
+    </task>
+    <task id="LOCAL-00006" summary="reorganizando administrador de panel posterior, modularizando y quitando sintactic sugar de eventos: ahora se reciben los eventos">
+      <option name="closed" value="true" />
+      <created>1714111309443</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714111309443</updated>
+    </task>
+    <task id="LOCAL-00007" summary="reorganizando grilla y actualizando pres y post tocados">
+      <option name="closed" value="true" />
+      <created>1714162295956</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714162295956</updated>
+    </task>
+    <task id="LOCAL-00008" summary="agregando ventanas de level up y game over">
+      <option name="closed" value="true" />
+      <created>1714170117359</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714170117359</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="pruebas" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_DETAILS_IN_CHANGES" value="false" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update .idea" />
+    <MESSAGE value="update creador de robots" />
+    <MESSAGE value="update starpoint" />
+    <MESSAGE value="ordenando file Tablero" />
+    <MESSAGE value="agregando reset y accion startGame" />
+    <MESSAGE value="ultimate changes from a grupal session" />
+    <MESSAGE value="agregando escena inicial" />
+    <MESSAGE value="reorganizando administrador de panel posterior, modularizando y quitando sintactic sugar de eventos: ahora se reciben los eventos" />
+    <MESSAGE value="reorganizando grilla y actualizando pres y post tocados" />
+    <MESSAGE value="agregando ventanas de level up y game over" />
+    <option name="LAST_COMMIT_MESSAGE" value="agregando ventanas de level up y game over" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
