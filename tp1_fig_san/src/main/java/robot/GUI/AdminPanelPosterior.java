@@ -8,7 +8,6 @@ import javafx.scene.layout.Priority;
 import robot.GUI.auxiliares.CustomButton;
 import robot.GUI.auxiliares.CustomLabel;
 import robot.GUI.auxiliares.ObjetoConTexto;
-import robot.Modelo.Acciones.*;
 import robot.Modelo.*;
 
 public class AdminPanelPosterior {
@@ -19,13 +18,14 @@ public class AdminPanelPosterior {
     private final CustomLabel nivel;
 
     public AdminPanelPosterior(int cantTpSafes, int nivelActual, int scoreActual){
-        tpRandom = new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TLP_RANDOM));
         tpSafe = new CustomButton(contentFormatted(EstadoDeJuego.EtiquetasModelo.TP_SAFE,cantTpSafes));
+        tpRandom = new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.TLP_RANDOM));
         esperar = new CustomButton(EstadoDeJuego.getEtiqueta(EstadoDeJuego.EtiquetasModelo.ESPERAR));
         score = new CustomLabel(contentFormatted(EstadoDeJuego.EtiquetasModelo.SCORE,scoreActual));
         nivel = new CustomLabel(contentFormatted(EstadoDeJuego.EtiquetasModelo.NIVEL,nivelActual));
         formatearTextos(new ObjetoConTexto[] {tpRandom,tpSafe,esperar,score,nivel});
     }
+
     //PRE: nodes inicializado
     //POST: crea y devuelve un Hbox que contiene los nodo recibidos
     private HBox crearHBox(Node[] nodes){
@@ -47,7 +47,7 @@ public class AdminPanelPosterior {
 
     //PRE: etiqueta y variable (v) inicializadas
     //POST: devuelve un string: contenido formateado segun la etiqueta del modelo y la variable
-    private String contentFormatted(EstadoDeJuego.EtiquetasModelo etiqueta, int v){
+    public String contentFormatted(EstadoDeJuego.EtiquetasModelo etiqueta, int v){
         return (EstadoDeJuego.getEtiqueta(etiqueta))+" "+v;
     }
 

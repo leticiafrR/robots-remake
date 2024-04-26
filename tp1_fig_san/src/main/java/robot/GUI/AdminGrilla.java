@@ -8,6 +8,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
+import robot.Modelo.*;
 import robot.Modelo.Acciones.AccionMovimiento;
 import robot.Modelo.Acciones.AccionTeleport;
 import robot.Modelo.Acciones.Action;
@@ -52,12 +53,12 @@ public class AdminGrilla {
         for(Node r: grilla.getChildren()){
             ((Label) r).setBackground(Background.fill(Color.BLACK));
         }
-        colocarImagen(e.posicionesRobotsX1(), "robotx1.png");
-        colocarImagen(e.posicionesRobotsX2(), "robotx2.png");
-        colocarImagen(e.posicionesFuego(), "fuego.png");
+        colocarImagen(e.posicionesRobotsX1(), Vista.getRuta(Vista.RutaFotos.ROBOTX1));
+        colocarImagen(e.posicionesRobotsX2(), Vista.getRuta(Vista.RutaFotos.ROBOTX2));
+        colocarImagen(e.posicionesFuego(), Vista.getRuta(Vista.RutaFotos.FUEGO));
         ArrayList<Vec2D> jugador= new ArrayList<>();
         jugador.add(e.posicionJugador());
-        colocarImagen(jugador, "player.png");
+        colocarImagen(jugador, Vista.getRuta(Vista.RutaFotos.JUGADOR));
     }
 
     //PRE: vector y estado de juego inicializados
@@ -78,6 +79,7 @@ public class AdminGrilla {
             }
         };
     }
+
     //PRE:
     //POST: deja de escuhar un posible Teleport, si no se estaba escuchando devuelve false, si sí true
     private boolean dejarDeEscucharTp(){

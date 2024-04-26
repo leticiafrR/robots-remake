@@ -8,6 +8,7 @@ import robot.Modelo.Personajes.RobotX1;
 import robot.Modelo.Personajes.RobotX2;
 import robot.Vec2D;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 public class EstadoDeJuego {
@@ -21,34 +22,35 @@ public class EstadoDeJuego {
     private ListenerLevelUp listenerLevelUp;
 
 
-    public  enum EtiquetasModelo{CANTIDAD_FIL,CANTIDAD_COL,NOMBRE,TP_SAFE,TLP_RANDOM,ESPERAR,SCORE,NIVEL,JUGAR};
+    public enum EtiquetasModelo{CANTIDAD_FIL,CANTIDAD_COL,NOMBRE,TP_SAFE,TLP_RANDOM,ESPERAR,SCORE,NIVEL,JUGAR};
     private static final String[] etiquetas = new String[]{"Cantidad de filas:","Cantidad de columnas:","ROBOT", "Teleport Safe:","Teleport Random","Esperar","Score:","nivel:","JUGAR!"};
 
-    public static String getEtiqueta(EtiquetasModelo etiqueta) { return etiquetas[etiqueta.ordinal()];}
-    //PRE:
-    //POST:
     public EstadoDeJuego(int largoX, int largoY){
         reset(largoX,largoY);
     }
 
+    //PRE:
+    //POST: devuelve el string que representa las etiquetas del modelo.
+    public static String getEtiqueta(EtiquetasModelo etiqueta) { return etiquetas[etiqueta.ordinal()];}
+
     //PRE: tablero ya inicializado y nivel>0
-    //POST:
-    public void startGame(){
+    //POST: pone al tablero en el punto incial de acuerdo al nivel
+    public void startLevel(){
         tablero.startPoint(nivel);
     }
 
     //PRE:
-    //POST: Inicializa atributos de Estado de Juego
+    //POST: Inicializa atributos de Estado de Juego sensibles a una nueva partida (score,cantidad Teleports safes,nivel y tablero) e inicia la partida
     public void reset(int largoX, int largoY){
         score =0;
         cantSafeTeleport=50;
         nivel=1;
         tablero= new Tablero(largoX, largoY);
-        startGame();
+        startLevel();
     }
 
     //PRE: tablero ya inicializado
-    //POST: pregunta si se ganó o si se perdió
+    //POST: actualiza estado de juego si se ganó o perdió
     public void actualizarEstadoJuego(){
         if (tablero.win()){
             nextLevel();
@@ -61,7 +63,6 @@ public class EstadoDeJuego {
     //POST: Ejecuta la accion
     public void update(Action a){
         a.aplicar(this);
-        actualizarEstadoJuego();
     }
 
     //PRE: direccion inicializada
@@ -72,13 +73,16 @@ public class EstadoDeJuego {
     }
 
     //PRE:
-    //POST: Sube de nivel y reinicia el tablero
+    //POST: Sube de nivel (e incrementa score y teleports seguros) y reinicia el tablero
     public void nextLevel(){
         score+=100*nivel;
         nivel++;
         cantSafeTeleport++;
-        startGame();
-        listenerLevelUp.levelUp(EtiquetasModelo.NIVEL+" "+nivel,EtiquetasModelo.SCORE+" "+score,EtiquetasModelo.TP_SAFE+" "+cantSafeTeleport);
+        startLevel();
+        listenerLevelUp.levelUp(etiquetaAct(EtiquetasModelo.NIVEL,nivel),etiquetaAct(EtiquetasModelo.SCORE,score),etiquetaAct(EtiquetasModelo.TP_SAFE,cantSafeTeleport));
+    }
+    private String etiquetaAct(EtiquetasModelo etiqueta, int v){
+        return getEtiqueta(etiqueta)+" "+v;
     }
 
     public void registrarListenerLevelUp(ListenerLevelUp listener){listenerLevelUp=listener;}
@@ -86,7 +90,7 @@ public class EstadoDeJuego {
     //PRE:  direccion inicializada
     //POST:
     public void realizarJugada(Vec2D nuevaPosicion){
-        if (posicionFueraDelTablero((int) nuevaPosicion.getX(), (int) nuevaPosicion.getY())){
+        if (posicionFueraDelTablero(nuevaPosicion)){
             return;
         }
         posicionarScene(nuevaPosicion);
@@ -95,7 +99,9 @@ public class EstadoDeJuego {
 
     //PRE: tablero inicializado
     //POST: comprueba si la posicion que debe moverse esta fuera del tablero
-    private boolean posicionFueraDelTablero(int x, int y){
+    private boolean posicionFueraDelTablero(Vec2D pos){
+        int x=(int)pos.getX();
+        int y=(int)pos.getY();
         return (x>= tablero.getLargoX() || x< 0 ||y>= tablero.getLargoY() ||y<0);
     }
 
@@ -135,10 +141,14 @@ public class EstadoDeJuego {
         listenerGameOver = listener;
     }
 
+    //PRE: listener inicializado
+    //POST: le agrega el listener al estado de juego para saber cuantos tpSafe disponibles hay
     public void registrarListenerTPdisponibles(ListenerTPSafe listener){
         listenerTPSafe= listener;
     }
 
+    //PRE: listenerTPSafe inicializado y cantSafeTeleport mayor o igual a 0
+    //POST: Devuelve true si se puede usar TPsafe y actualiza su valor, si no devuelve falso
     public boolean usarTpSafe(){
         if (cantSafeTeleport==0){
             return false;
@@ -175,21 +185,21 @@ public class EstadoDeJuego {
     }
 
 
-    //falta terminar xd
     public static String[] getInstruccionesModelo(){
         return new String[]{ "Para no perder ante los robots ten en cuenta:",
                 "- No dejes que te alcancen, los robots te persiguen.",
                 "- Hay robots que avanzan de a dos celdas, y robots que avanzan de a una.",
-                "- Lográs que dos robots mueran si colisionan.",
-                "- Producto de la muerte de un robot hay celdas incendiadas.",
-                "- Pisar una celda incendiada te mata vos y cualquier robot",
-                "- pasas de nivel cuando todos los robots muerieron",
-                "- inicialemente tienes 1 un teleport ",
+                "- Logras que dos robots mueran si colisionan.",
+                "- Por el producto de la muerte de un robot se incencia la celda.",
+                "- Pisar una celda incendiada te mata vos y cualquier robot.",
+                "- Pasas de nivel cuando todos los robots han muerto.",
+                "- Inicialemente tienes 1 un teleport.",
+                "- Cuando avanzas de nivel, se te suma un teleport en base a los que tienes.  ",
         };
     }
     public static String[] InstructionsControlGame(){
         return new String[]{"Para moverte puedes: ",
-                "- Clickear a donde querés ir (movimiento de a 1)",
+                "- Clickear a donde querés ir (movimiento de a 1)  ",
                 "- W: Arriba,S: Abajo,A: Izquierda,D: Derecha",
                 "- E: Diagonal derecha superior",
                 "- Q: Diagonal izquierda superior",

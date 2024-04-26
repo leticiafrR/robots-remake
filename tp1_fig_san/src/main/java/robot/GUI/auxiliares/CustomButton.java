@@ -16,10 +16,13 @@ public class CustomButton extends javafx.scene.control.Button implements ObjetoC
     public void setTexto(String contenido) {
         super.setText(contenido);
     }
+
     public void setMaxSize(double width, double height){super.setMaxSize(width,height);}
 
-    public void setTextAlignmentCustom(TextAlignment value){super.setTextAlignment(value);};
+    public void setTextAlignmentCustom(TextAlignment value){super.setTextAlignment(value);}
+
     public void setAlineamiento(Pos pos){super.setAlignment(pos);}
+
     public void formatear(){
         this.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         this.setTextAlignmentCustom(TextAlignment.CENTER);

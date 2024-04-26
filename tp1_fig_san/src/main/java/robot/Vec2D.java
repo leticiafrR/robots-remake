@@ -19,7 +19,7 @@ public class Vec2D {
         return this.x == other.x && this.y == other.y;
     }
 
-    //PRE:
+    //PRE: vectores inicializado
     //POST: indica si el vector está contenido en los vectores que pasaron
     public boolean estaContenido(ArrayList<Vec2D> vectores){
         for (Vec2D v: vectores){
@@ -27,12 +27,6 @@ public class Vec2D {
         }
         return false;
     }
-   // @Override
-
-
-    /*public String toString() {
-        return "(%f, %f)".formatted(x, y);
-    }*/
 
     public double getX() {
         return x;

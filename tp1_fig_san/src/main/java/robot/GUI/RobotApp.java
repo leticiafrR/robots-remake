@@ -17,7 +17,9 @@ public class RobotApp extends Application {
 
     @Override
     public void start(Stage stage) {
+
         Vista vista = new Vista(stage);
+        vista.iniciarJuego();
     }
 
     public static void main(String[] args) {

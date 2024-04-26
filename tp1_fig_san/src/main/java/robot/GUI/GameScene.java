@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.*;
 import robot.Modelo.Acciones.AccionMovimiento;
@@ -131,12 +132,22 @@ public class GameScene {
         ListenerLevelUp listenerLevelUp =new ListenerLevelUp() {
             @Override
             public void levelUp(String nivelActualizado,String scoreActualizado,String tpSafeActualizado) {
+                crearAlertaNextLevel();
                 adminPanelPost.actualizarContenido(nivelActualizado, adminPanelPost.getNivel());
                 adminPanelPost.actualizarContenido(scoreActualizado, adminPanelPost.getScore());
                 adminPanelPost.actualizarContenido(tpSafeActualizado, adminPanelPost.getTpSafe());
             }
         };
         gameState.registrarListenerLevelUp(listenerLevelUp);
+    }
+
+    //PRE:
+    //POST:
+    public void crearAlertaNextLevel(){
+        Alert alert= new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("AVANZASTE DE NIVEL");
+        alert.setContentText("SIGUE ASI");
+        alert.show();
     }
 
     public Scene getPrincipal() {

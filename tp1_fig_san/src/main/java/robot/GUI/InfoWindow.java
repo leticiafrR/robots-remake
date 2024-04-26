@@ -85,6 +85,7 @@ public class InfoWindow {
         l.setStyle("-fx-padding: 0 0 0 10;");
         l.setFont(new Font("Times New Roman",16));
         l.setTextFill(Color.WHITE);
+        l.setMinWidth(l.getWidth());
         return l;
     }
 
@@ -93,8 +94,6 @@ public class InfoWindow {
     //POST: setea configuración de fondo de la ventana
     private void setStage(){
         window.setTitle(stageName);
-        window.setHeight(360);
-        window.setWidth(500);
         window.setResizable(false);
         Image icon = new Image("logo.png");
         window.getIcons().add(icon);
