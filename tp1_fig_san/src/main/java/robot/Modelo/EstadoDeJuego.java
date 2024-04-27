@@ -132,7 +132,6 @@ public class EstadoDeJuego {
     }
 
 
-
     //PRE: listener inicializado
     //POST: le agrega el listener al estado de juego para saber cuando perdio
     public void registrarListenerGameOver(ListenerGameOver listener){
@@ -160,26 +159,13 @@ public class EstadoDeJuego {
     public int getPuntuacion() {
         return score;
     }
-    public void setPuntuacion(int puntuacion) {
-        this.score = puntuacion;
-    }
-    public Tablero getTablero() {
-        return tablero;
-    }
-    public void setTablero(Tablero tablero) {
-        this.tablero = tablero;
-    }
+
     public int getCantSafeTeleport() {
         return cantSafeTeleport;
     }
-    public void setCantSafeTeleport(int cantSafeTeleport) {
-        this.cantSafeTeleport = cantSafeTeleport;
-    }
+
     public int getNivel() {
         return nivel;
-    }
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
     }
 
 

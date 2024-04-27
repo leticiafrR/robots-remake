@@ -54,18 +54,19 @@ public class GameScene {
         crearCajaContendoraMain();
         principal= new Scene(verticalRoot, (columnas*40), (filas*40)+50);
         controladorMainScene();
-        sendListeners();
+        sendListenersModelo();
     }
 
     //PRE: gameState inicalizado
-    //POST: inicializa al administrador del panelPosterior e instancia al panelPosterior de botones (lo configura)
+    //POST: inicializa al administrador  del panelPosterior e instancia al panelPosterior de botones (lo configura)
     private void crearPanelInferior(){
         adminPanelPost = new AdminPanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
         panelPost = adminPanelPost.getHb();
-        adminPanelPost.asignarEventos(eventoTpRandom(),eventoTpSafe(),eventoEsperar());
+        adminPanelPost.registrarListeners(listenerTpRandom(), listenerTpSafe(), listenerEsperar());
         panelPost.setMaxSize(Double.MAX_VALUE, 60);
         panelPost.setMinHeight(60);
     }
+
 
     //PRE: gameState inicializado
     //POST: inicializa al administrador dela grilla y a la misma grilla del juego
@@ -109,7 +110,7 @@ public class GameScene {
 
     //PRE:
     //POST: envia listener al modelo
-    private void sendListeners(){
+    private void sendListenersModelo(){
         sendListenerTp();
         sendListenerLevelUp();
     }
@@ -155,8 +156,8 @@ public class GameScene {
     }
 
     //PRE: gameState y adminGrilla inicializados
-    //POST: devuelve evento ante un teleport random
-    private EventHandler<ActionEvent> eventoTpRandom(){
+    //POST: devuelve un listener con la lógica ante un teleport random
+    private EventHandler<ActionEvent> listenerTpRandom(){
         return new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -168,8 +169,8 @@ public class GameScene {
     }
 
     //PRE: gameState y adminGrilla inicializados
-    //POST: devuelve evento ante un "esperar" del jugador
-    private EventHandler<ActionEvent> eventoEsperar(){
+    //POST: devuelve listener con la lógica ante un "esperar" del jugador
+    private EventHandler<ActionEvent> listenerEsperar(){
         return new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -181,8 +182,8 @@ public class GameScene {
     }
 
     //PRE: adminGrilla inicializado
-    //POST: devuelve un evento ante un "teleport safe" del jugador
-    private EventHandler<ActionEvent> eventoTpSafe(){
+    //POST: devuelve un listener con la lógica ante un "teleport safe" del jugador
+    private EventHandler<ActionEvent> listenerTpSafe(){
         return new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
