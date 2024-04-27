@@ -156,7 +156,7 @@ public class GameScene {
     }
 
     //PRE: gameState y adminGrilla inicializados
-    //POST: devuelve evento ante un teleport random
+    //POST: devuelve un listener con la lógica ante un teleport random
     private EventHandler<ActionEvent> listenerTpRandom(){
         return new EventHandler<ActionEvent>() {
             @Override
@@ -169,7 +169,7 @@ public class GameScene {
     }
 
     //PRE: gameState y adminGrilla inicializados
-    //POST: devuelve evento ante un "esperar" del jugador
+    //POST: devuelve listener con la lógica ante un "esperar" del jugador
     private EventHandler<ActionEvent> listenerEsperar(){
         return new EventHandler<ActionEvent>() {
             @Override
@@ -182,7 +182,7 @@ public class GameScene {
     }
 
     //PRE: adminGrilla inicializado
-    //POST: devuelve un evento ante un "teleport safe" del jugador
+    //POST: devuelve un listener con la lógica ante un "teleport safe" del jugador
     private EventHandler<ActionEvent> listenerTpSafe(){
         return new EventHandler<ActionEvent>() {
             @Override
