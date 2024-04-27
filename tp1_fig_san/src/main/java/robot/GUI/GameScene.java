@@ -58,7 +58,7 @@ public class GameScene {
     }
 
     //PRE: gameState inicalizado
-    //POST: inicializa al administrador del panelPosterior e instancia al panelPosterior de botones (lo configura)
+    //POST: inicializa al administrador  del panelPosterior e instancia al panelPosterior de botones (lo configura)
     private void crearPanelInferior(){
         adminPanelPost = new AdminPanelPosterior(gameState.getCantSafeTeleport(), gameState.getNivel(),gameState.getPuntuacion());
         panelPost = adminPanelPost.getHb();

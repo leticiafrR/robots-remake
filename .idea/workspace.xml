@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="agregando ventanas de level up y game over">
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/RobotApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/RobotApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleport.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/AccionTeleport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Acciones/Action.java" afterDir="false" />
+    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="cambios futiles">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene$TypeSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/InitialScene$TypeSize.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/GUI/auxiliares/CustomLabel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/EstadoDeJuego$EtiquetasModelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/target/classes/robot/Modelo/EstadoDeJuego$EtiquetasModelo.class" afterDir="false" />
     </list>
-    <list id="4c235433-9455-402e-981b-e1f2aa30eb86" name="Changes by aizen" comment="" />
     <list id="12c0b3bb-abf0-4c63-8fcc-8ccf8aa21d8f" name="Changes by Usuario" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,28 +56,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.RobotApp.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "pruebasVista",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/aizen/Escritorio/Git/UBA/Paradigmas/TP1_ROBOTS_FIG-SAN/FIG-SAN_TP1_PARADIGMAS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RobotApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;pruebasVista&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/aizen/Escritorio/Git/UBA/Paradigmas/TP1_ROBOTS_FIG-SAN/FIG-SAN_TP1_PARADIGMAS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\IdeaProjects\FIG-SAN_TP1_PARADIGMAS\tp1_fig_san\src\main\resources" />
@@ -204,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714170117359</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="cambios futiles">
+      <option name="closed" value="true" />
+      <created>1714170469422</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714170469422</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +258,8 @@
     <MESSAGE value="reorganizando administrador de panel posterior, modularizando y quitando sintactic sugar de eventos: ahora se reciben los eventos" />
     <MESSAGE value="reorganizando grilla y actualizando pres y post tocados" />
     <MESSAGE value="agregando ventanas de level up y game over" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregando ventanas de level up y game over" />
+    <MESSAGE value="cambios futiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios futiles" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

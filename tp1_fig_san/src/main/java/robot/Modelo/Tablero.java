@@ -146,18 +146,12 @@ public class Tablero {
         return false;
     }
 
-    //PRE:
-    //POST:
     public Vec2D posJug() { return player.getPosicion(); }
 
     //PRE:rand inicializado
     //POST: genera un vector random dentro del tablero
     public Vec2D vectorRandom() { return new Vec2D(rand.nextInt(largoX),rand.nextInt(largoY)); }
-    public Jugador getPlayer() { return player;}
-
-    public ArrayList<Robot> getRobots() {
-        return robots;
-    }
+    
 
     //PRE: clasebuscada es una clase valida para buscar
     //POST: devuelve las posiciones de los robot depende de su categoria (x1 o x2)
