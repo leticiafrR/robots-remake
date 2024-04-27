@@ -8,7 +8,7 @@ public class RobotX2 extends Robot{
     }
     @Override
     public void moverse(Vec2D posicion){
-        super.setPosicion(new Vec2D(posicion.getX(), posicion.getY()));
+        super.moverse(posicion);
     }
 
     @Override
