@@ -51,12 +51,12 @@ public class AdminPanelPosterior {
         return (EstadoDeJuego.getEtiqueta(etiqueta))+" "+v;
     }
 
-    //PRE: los tres eventos inicializados
-    //POST: asigna a cada boton el comportamiento indicado
-    public void asignarEventos(EventHandler<ActionEvent> eRandom,EventHandler<ActionEvent> eSafe,EventHandler<ActionEvent> eWait){
-        tpRandom.setOnAction(eRandom);
-        tpSafe.setOnAction(eSafe);
-        esperar.setOnAction(eWait);
+    //PRE: los tres listener inicializados con su repectivo manejo al evento que estén asociados
+    //POST: asigna a cada boton su listener
+    public void registrarListeners(EventHandler<ActionEvent> lRandom, EventHandler<ActionEvent> lSafe, EventHandler<ActionEvent> lWait){
+        tpRandom.setOnAction(lRandom);
+        tpSafe.setOnAction(lSafe);
+        esperar.setOnAction(lWait);
     }
 
     //PRE: objetoConTexto y String inicializados

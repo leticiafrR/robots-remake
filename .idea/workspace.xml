@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="cambios futiles">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="778ecfa1-14d0-4aa0-b250-89e1741eec68" name="Changes" comment="--">
+      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/AdminPanelPosterior.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/AdminPanelPosterior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/GUI/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/EstadoDeJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/tp1_fig_san/src/main/java/robot/Modelo/Tablero.java" afterDir="false" />
     </list>
     <list id="12c0b3bb-abf0-4c63-8fcc-8ccf8aa21d8f" name="Changes by Usuario" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +204,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714170469422</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="--">
+      <option name="closed" value="true" />
+      <created>1714243618789</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714243618789</updated>
+    </task>
+    <task id="LOCAL-00011" summary="--">
+      <option name="closed" value="true" />
+      <created>1714243658674</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714243658674</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +273,8 @@
     <MESSAGE value="reorganizando grilla y actualizando pres y post tocados" />
     <MESSAGE value="agregando ventanas de level up y game over" />
     <MESSAGE value="cambios futiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios futiles" />
+    <MESSAGE value="--" />
+    <option name="LAST_COMMIT_MESSAGE" value="--" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
