@@ -41,7 +41,7 @@ public class EstadoDeJuego {
     //POST: Inicializa atributos de Estado de Juego sensibles a una nueva partida (score,cantidad Teleports safes,nivel y tablero) e inicia la partida
     public void reset(int largoX, int largoY){
         score =0;
-        cantSafeTeleport=50;
+        cantSafeTeleport=3;
         nivel=1;
         tablero= new Tablero(largoX, largoY);
         startLevel();
