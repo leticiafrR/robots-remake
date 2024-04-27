@@ -21,6 +21,6 @@ public class Robot extends Personaje{
 
     @Override
     public void moverse(Vec2D posicion) {
-        super.setPosicion(new Vec2D(posicion.getX(), posicion.getY()));
+        super.setPosicion(posicion);
     }
 }

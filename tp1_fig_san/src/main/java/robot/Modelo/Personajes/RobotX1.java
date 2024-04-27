@@ -13,6 +13,6 @@ public class RobotX1 extends Robot{
     }
     @Override
     public void moverse(Vec2D posicion){
-        super.setPosicion(posicion);
+        super.moverse(posicion);
     }
 }
