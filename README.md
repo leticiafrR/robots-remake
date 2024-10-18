@@ -1,6 +1,10 @@
+# TP GRUPAL: remake Robots (personalizado)
 
-Aizen Sanchez 110944
+El presente trabajo práctico de la materia *Paradigmas de programación* de la FIUBA, desarrollado en *java*, presenta:
 
-Leticia Figueroa 110510
+- representación gráfica (diagrama de clases) del modelado de la lógica del juego
+- GUI implementada mediante *javafx*
 
-la presentación del trabajo final se encuentra en la rama main.
+# Integrantes 
+- Aizen Sanchez 110944
+- Leticia Figueroa 110510
